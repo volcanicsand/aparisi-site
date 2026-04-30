@@ -14,7 +14,7 @@
   --text-light: #777;
   --rule: #e2ddd5;
   --serif: 'DM Serif Display', Georgia, serif;
-  --sans: 'Inter', -apple-system, sans-serif;
+  --sans: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 html { scroll-behavior: smooth; }
