@@ -41,14 +41,13 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      background: rgba(253, 251, 248, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--rule);
+      background: transparent;
+      border-bottom: none;
     }
     .nav-inner {
-      max-width: 1100px;
+      max-width: 1800px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -58,33 +57,33 @@
       font-family: var(--serif);
       font-size: 26px;
       font-weight: 600;
-      color: var(--text);
+      color: #fff;
     }
-    .nav-logo em { font-style: normal; color: var(--accent); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-logo em { font-style: normal; color: rgba(255,255,255,0.5); }
+    .nav-links { display: flex; gap: 48px; list-style: none; }
     .nav-links a {
-      color: var(--text-light);
-      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-size: 22px;
       font-weight: 400;
       transition: color 0.15s;
     }
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: #fff; }
     .nav-right {
       display: flex;
       align-items: center;
       gap: 20px;
     }
     .nav-phone {
-      color: var(--text-light);
-      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-size: 22px;
     }
-    .nav-phone:hover { color: var(--text); }
+    .nav-phone:hover { color: #fff; }
     .nav-cta {
       background: var(--accent);
       color: #fff;
-      font-size: 13px;
+      font-size: 20px;
       font-weight: 500;
-      padding: 10px 22px;
+      padding: 18px 38px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -103,7 +102,7 @@
       display: block;
       width: 22px;
       height: 2px;
-      background: var(--text);
+      background: #fff;
       margin: 5px 0;
     }
 
@@ -143,9 +142,9 @@
       position: relative;
       min-height: 100vh;
       display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: left;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: center;
       overflow: hidden;
       background: var(--navy);
     }
@@ -159,19 +158,19 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        to right,
-        rgba(10, 18, 28, 0.82) 0%,
-        rgba(10, 18, 28, 0.6) 40%,
-        rgba(10, 18, 28, 0.25) 100%
+        to bottom,
+        rgba(10, 18, 28, 0.55) 0%,
+        rgba(10, 18, 28, 0.4) 50%,
+        rgba(10, 18, 28, 0.6) 100%
       );
     }
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 1100px;
       width: 100%;
-      padding: 120px 32px 80px;
+      padding: 200px 64px 80px;
       margin: 0 auto;
+      text-align: center;
     }
     .hero-eyebrow {
       font-family: var(--sans);
@@ -184,11 +183,11 @@
     }
     .hero-name {
       font-family: var(--serif);
-      font-size: clamp(52px, 9vw, 96px);
+      font-size: clamp(60px, 10vw, 120px);
       font-weight: 400;
       color: #fff;
       letter-spacing: -1px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     .hero-name em {
       font-style: normal;
@@ -205,22 +204,23 @@
       font-size: 18px;
       font-weight: 300;
       color: rgba(255,255,255,0.6);
-      max-width: 480px;
-      margin: 0 0 40px;
+      max-width: 620px;
+      margin: 0 auto 40px;
       line-height: 1.75;
     }
     .hero-actions {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      gap: 16px;
+      justify-content: center;
+      gap: 80px;
+      margin-top: 48px;
       flex-wrap: wrap;
     }
     .btn {
       display: inline-block;
-      padding: 14px 32px;
+      padding: 20px 48px;
       font-family: var(--sans);
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 500;
       border-radius: 6px;
       cursor: pointer;
@@ -238,6 +238,29 @@
       border: 1px solid rgba(255,255,255,0.2);
     }
     .btn-ghost:hover { border-color: rgba(255,255,255,0.45); color: #fff; }
+    .hero-scripture {
+      position: absolute;
+      left: 64px;
+      bottom: 80px;
+      max-width: 260px;
+      text-align: left;
+      font-family: var(--serif);
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 400;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.8;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    .hero-scripture cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      font-style: normal;
+      color: rgba(255,255,255,0.25);
+    }
     .hero-note {
       margin-top: 20px;
       font-size: 12px;
@@ -544,11 +567,11 @@
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Aparisi <em>&</em> Associates</a>
+      <a href="#" class="nav-logo"></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="how-it-works.html"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
-        <li><a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas de Práctica</span></a></li>
         <li><a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a></li>
+        <li><a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas de Práctica</span></a></li>
+        <li><a href="how-it-works.html"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
         <li><a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a></li>
       </ul>
       <div class="nav-right">
@@ -569,19 +592,19 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="en">Immigration Law &middot; Silver Spring, Maryland</span>
-        <span class="es">Derecho Migratorio &middot; Silver Spring, Maryland</span>
-      </div>
       <div class="hero-name">Aparisi <em>&</em> Associates</div>
       <h1>
-        <span class="en">Your future is worth<br>fighting for.</span>
-        <span class="es">Su futuro vale la pena<br>defenderlo.</span>
+        <span class="en">[Slogan placeholder]</span>
+        <span class="es">[Eslogan placeholder]</span>
       </h1>
       <p class="hero-sub">
-        <span class="en">Over 26 years helping families navigate the U.S. immigration system with experienced, personal legal counsel.</span>
-        <span class="es">Más de 26 años ayudando a familias a navegar el sistema migratorio con asesoría legal experimentada y personal.</span>
+        <span class="en">Over 30 years helping families navigate the American immigration system. Experienced. Devoted. Compassionate.</span>
+        <span class="es">Más de 30 años ayudando a familias a navegar el sistema migratorio estadounidense. Experimentados. Dedicados. Compasivos.</span>
       </p>
+      <blockquote class="hero-scripture">
+        "Yo soy el buen pastor; el buen pastor su vida da por las ovejas. Mas el asalariado, y que no es el pastor, de quien no son propias las ovejas, ve venir al lobo y deja las ovejas y huye, y el lobo arrebata las ovejas y las dispersa. Así que el asalariado huye, porque es asalariado, y no le importan las ovejas. Yo soy el buen pastor; y conozco mis ovejas, y las mías me conocen. También tengo otras ovejas que no son de este redil; aquéllas también debo traer, y oirán mi voz; y habrá un rebaño, y un pastor."
+        <cite>— Juan 10:11-16</cite>
+      </blockquote>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-accent">
           <span class="en">Schedule a Consultation</span>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Aparisi & Associates</title>
-  <meta name="description" content="Learn about Jaime Winthuysen Aparisi, founder of Aparisi & Associates — over 26 years of immigration law experience serving the Washington, D.C. area.">
+  <meta name="description" content="Learn about Jaime Winthuysen Aparisi, founder of Aparisi & Associates — over 30 years of immigration law experience serving the Washington, D.C. area.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -552,6 +552,89 @@
       font-weight: 400;
       color: var(--text);
     }
+
+    /* --- Firm Intro --- */
+    .firm-intro {
+      background: var(--cream);
+      padding: 64px 0 0;
+    }
+    .firm-intro-inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+    .firm-intro p {
+      font-size: 20px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      max-width: 860px;
+    }
+
+    /* --- Attorney Profiles --- */
+    .attorneys-section {
+      background: var(--cream);
+      padding: 64px 0 100px;
+    }
+    .attorneys-inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+    .attorney-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      align-items: start;
+      padding: 48px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .attorney-card:first-child {
+      border-top: 1px solid var(--rule);
+    }
+    .attorney-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(145deg, #e8e4de, #d5cfc6);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 13px;
+      font-family: var(--sans);
+    }
+    .attorney-info h2 {
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .attorney-title {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .attorney-bio {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.75;
+      max-width: 640px;
+    }
+
+    @media (max-width: 768px) {
+      .attorney-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .attorney-photo {
+        max-width: 200px;
+      }
+      .firm-intro-inner,
+      .attorneys-inner {
+        padding: 0 24px;
+      }
+    }
   </style>
 </head>
 
@@ -567,9 +650,9 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Aparisi <em>&</em> Associates</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="how-it-works.html"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
-        <li><a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas de Práctica</span></a></li>
         <li><a href="about.html" class="active"><span class="en">About</span><span class="es">Nosotros</span></a></li>
+        <li><a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas de Práctica</span></a></li>
+        <li><a href="how-it-works.html"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
         <li><a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a></li>
       </ul>
       <div class="nav-right">
@@ -599,61 +682,102 @@
     </div>
   </header>
 
-  <!-- About Section -->
-  <main class="main-content">
-    <div class="about-section">
-      <!-- Photo -->
-      <div class="about-photo">[Photo]</div>
+  <!-- Firm Intro -->
+  <section class="firm-intro">
+    <div class="firm-intro-inner">
+      <p>
+        <span class="en">Aparisi &amp; Associates is a multilingual boutique immigration law firm in Silver Spring, Maryland. Founded by Jaime Winthuysen Aparisi — an immigrant and the son of immigrants — the firm has spent over 30 years serving families across the Washington, D.C. metropolitan area. We understand that every case represents a family's future, and we treat it that way.</span>
+        <span class="es">Aparisi &amp; Associates es una firma boutique multilingüe de derecho migratorio en Silver Spring, Maryland. Fundada por Jaime Winthuysen Aparisi — un inmigrante e hijo de inmigrantes — la firma ha dedicado más de 30 años al servicio de familias en toda el área metropolitana de Washington, D.C. Entendemos que cada caso representa el futuro de una familia, y lo tratamos de esa manera.</span>
+      </p>
+    </div>
+  </section>
 
-      <!-- Text -->
-      <div class="about-text">
-        <div class="section-eyebrow">
-          <span class="en">About the Firm</span>
-          <span class="es">Sobre la Firma</span>
-        </div>
-        <h2>Jaime Winthuysen Aparisi</h2>
-        <div class="about-role">
-          <span class="en">Founder &amp; Managing Attorney</span>
-          <span class="es">Fundador y Abogado Principal</span>
-        </div>
+  <!-- Attorney Profiles -->
+  <section class="attorneys-section">
+    <div class="attorneys-inner">
 
-        <p>
-          <span class="en">An immigrant and the son of immigrants, Jaime brings over 26 years of personal understanding and legal expertise to every case. He founded Aparisi &amp; Associates as a multilingual boutique firm dedicated to educating and empowering clients through every step of the immigration process.</span>
-          <span class="es">Inmigrante e hijo de inmigrantes, Jaime aporta más de 26 años de comprensión personal y experiencia legal a cada caso. Fundó Aparisi &amp; Associates como una firma boutique multilingüe dedicada a educar y empoderar a sus clientes en cada etapa del proceso migratorio.</span>
-        </p>
-
-        <p>
-          <span class="en">Based in Silver Spring, Maryland, the firm serves clients across the Washington, D.C. metropolitan area. We understand that every case represents a family's future — and we treat it that way.</span>
-          <span class="es">Con sede en Silver Spring, Maryland, la firma atiende a clientes en toda el área metropolitana de Washington, D.C. Entendemos que cada caso representa el futuro de una familia — y lo tratamos de esa manera.</span>
-        </p>
-
-        <!-- Stats -->
-        <div class="about-stats">
-          <div class="about-stat">
-            <strong>26+</strong>
-            <span>
-              <span class="en">Years of Experience</span>
-              <span class="es">Años de Experiencia</span>
-            </span>
+      <!-- Jaime -->
+      <div class="attorney-card">
+        <div class="attorney-photo">[Photo]</div>
+        <div class="attorney-info">
+          <h2>Jaime Winthuysen Aparisi</h2>
+          <div class="attorney-title">
+            <span class="en">Founder &amp; Managing Attorney</span>
+            <span class="es">Fundador y Abogado Principal</span>
           </div>
-          <div class="about-stat">
-            <strong>1000s</strong>
-            <span>
-              <span class="en">Families Helped</span>
-              <span class="es">Familias Atendidas</span>
-            </span>
-          </div>
-          <div class="about-stat">
-            <strong>EN/ES</strong>
-            <span>
-              <span class="en">Bilingual Service</span>
-              <span class="es">Servicio Bilingüe</span>
-            </span>
-          </div>
+          <p class="attorney-bio">
+            <span class="en">[Bio placeholder]</span>
+            <span class="es">[Bio placeholder]</span>
+          </p>
         </div>
       </div>
+
+      <!-- Sylvie -->
+      <div class="attorney-card">
+        <div class="attorney-photo">[Photo]</div>
+        <div class="attorney-info">
+          <h2>Sylvie [Last Name]</h2>
+          <div class="attorney-title">
+            <span class="en">[Title]</span>
+            <span class="es">[Título]</span>
+          </div>
+          <p class="attorney-bio">
+            <span class="en">[Bio placeholder]</span>
+            <span class="es">[Bio placeholder]</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Hannah -->
+      <div class="attorney-card">
+        <div class="attorney-photo">[Photo]</div>
+        <div class="attorney-info">
+          <h2>Hannah [Last Name]</h2>
+          <div class="attorney-title">
+            <span class="en">[Title]</span>
+            <span class="es">[Título]</span>
+          </div>
+          <p class="attorney-bio">
+            <span class="en">[Bio placeholder]</span>
+            <span class="es">[Bio placeholder]</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Felipe -->
+      <div class="attorney-card">
+        <div class="attorney-photo">[Photo]</div>
+        <div class="attorney-info">
+          <h2>Felipe [Last Name]</h2>
+          <div class="attorney-title">
+            <span class="en">[Title]</span>
+            <span class="es">[Título]</span>
+          </div>
+          <p class="attorney-bio">
+            <span class="en">[Bio placeholder]</span>
+            <span class="es">[Bio placeholder]</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- John -->
+      <div class="attorney-card">
+        <div class="attorney-photo">[Photo]</div>
+        <div class="attorney-info">
+          <h2>John Hare</h2>
+          <div class="attorney-title">
+            <span class="en">[Title]</span>
+            <span class="es">[Título]</span>
+          </div>
+          <p class="attorney-bio">
+            <span class="en">[Bio placeholder]</span>
+            <span class="es">[Bio placeholder]</span>
+          </p>
+        </div>
+      </div>
+
     </div>
-  </main>
+  </section>
 
   <!-- Footer -->
   <footer>
