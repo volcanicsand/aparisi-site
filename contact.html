@@ -41,9 +41,9 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      background: rgba(253, 251, 248, 0.95);
+      background: rgba(26, 37, 53, 0.85);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .nav-inner {
       max-width: 1100px;
@@ -58,28 +58,28 @@
       font-family: var(--serif);
       font-size: 26px;
       font-weight: 600;
-      color: var(--text);
+      color: #fff;
     }
-    .nav-logo em { font-style: normal; color: var(--accent); }
+    .nav-logo em { font-style: normal; color: rgba(255,255,255,0.5); }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
-      color: var(--text-light);
+      color: rgba(255,255,255,0.6);
       font-size: 14px;
       font-weight: 400;
       transition: color 0.15s;
     }
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a.active { color: var(--accent); font-weight: 500; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.active { color: #fff; font-weight: 500; }
     .nav-right {
       display: flex;
       align-items: center;
       gap: 20px;
     }
     .nav-phone {
-      color: var(--text-light);
+      color: rgba(255,255,255,0.6);
       font-size: 14px;
     }
-    .nav-phone:hover { color: var(--text); }
+    .nav-phone:hover { color: #fff; }
     .nav-cta {
       background: var(--accent);
       color: #fff;
@@ -104,7 +104,7 @@
       display: block;
       width: 22px;
       height: 2px;
-      background: var(--text);
+      background: #fff;
       margin: 5px 0;
     }
 
@@ -141,11 +141,20 @@
 
     /* --- Page Header --- */
     .page-header {
-      background: var(--cream);
+      position: relative;
+      background: var(--navy);
       padding: 140px 0 72px;
-      border-bottom: 1px solid var(--rule);
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(26,37,53,0.97) 0%, rgba(42,110,90,0.2) 100%);
     }
     .page-header-inner {
+      position: relative;
+      z-index: 1;
       max-width: 1800px;
       margin: 0 auto;
       padding: 0 80px;
@@ -155,18 +164,18 @@
       font-weight: 600;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--accent);
+      color: rgba(255,255,255,0.5);
       margin-bottom: 14px;
     }
     .page-header h1 {
       font-size: clamp(36px, 5vw, 58px);
       font-weight: 400;
-      color: var(--text);
+      color: #fff;
       margin-bottom: 12px;
     }
     .page-header-sub {
       font-size: 17px;
-      color: var(--text-light);
+      color: rgba(255,255,255,0.55);
       max-width: 520px;
       line-height: 1.75;
     }
