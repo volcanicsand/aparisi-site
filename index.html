@@ -56,7 +56,7 @@
     }
     .nav-logo {
       font-family: var(--serif);
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 600;
       color: var(--text);
     }
@@ -182,6 +182,18 @@
       color: rgba(255,255,255,0.55);
       margin-bottom: 28px;
     }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(52px, 9vw, 96px);
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .hero-name em {
+      font-style: normal;
+      color: var(--gold, var(--accent));
+    }
     .hero h1 {
       font-size: clamp(42px, 7vw, 76px);
       font-weight: 400;
@@ -249,81 +261,85 @@
 
     /* --- Main Content (one continuous flow) --- */
     .main-content {
-      background: var(--warm-bg);
+      background: var(--cream);
       padding: 80px 0 0;
     }
 
     /* --- Process --- */
     .process-section {
-      max-width: 1100px;
+      max-width: 1800px;
       margin: 0 auto;
-      padding: 0 32px 80px;
+      padding: 0 80px 80px;
     }
     .process-header {
       margin-bottom: 48px;
     }
     .process-header h2 {
-      font-size: clamp(28px, 4vw, 38px);
+      font-size: clamp(32px, 4vw, 44px);
       font-weight: 400;
       color: var(--text);
       margin-bottom: 8px;
     }
     .process-header p {
-      font-size: 16px;
+      font-size: 17px;
       color: var(--text-light);
     }
     .process-steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
+      gap: 24px;
     }
     .process-step {
       position: relative;
-      padding-top: 20px;
-      border-top: 2px solid var(--accent);
+      padding: 32px;
+      background: var(--warm-bg);
+      border-radius: 6px;
+      border-top: 3px solid var(--accent);
     }
     .process-num {
       font-family: var(--serif);
-      font-size: 32px;
+      font-size: 40px;
       font-weight: 400;
       color: var(--accent);
       margin-bottom: 8px;
     }
     .process-step h3 {
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 400;
       color: var(--text);
       margin-bottom: 8px;
     }
     .process-step p {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-light);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     /* --- Practice Areas --- */
     .practice-section {
-      max-width: 1100px;
+      max-width: 1800px;
       margin: 0 auto;
-      padding: 0 32px 80px;
+      padding: 0 80px 80px;
     }
     .practice-header {
       margin-bottom: 32px;
     }
     .practice-header h2 {
-      font-size: clamp(28px, 4vw, 38px);
+      font-size: clamp(32px, 4vw, 44px);
       font-weight: 400;
       color: var(--text);
     }
     .practice-list {
-      columns: 2;
-      column-gap: 48px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
     .practice-item {
-      padding: 14px 0;
-      border-bottom: 1px solid var(--rule);
-      break-inside: avoid;
-      font-size: 17px;
+      padding: 28px 24px;
+      background: var(--warm-bg);
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+      font-size: 18px;
       color: var(--text);
       font-family: var(--serif);
       font-weight: 400;
@@ -331,12 +347,12 @@
 
     /* --- About --- */
     .about-section {
-      max-width: 1100px;
+      max-width: 1800px;
       margin: 0 auto;
-      padding: 0 32px 80px;
+      padding: 0 80px 80px;
       display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 56px;
+      grid-template-columns: 380px 1fr;
+      gap: 80px;
       align-items: start;
     }
     .about-photo {
@@ -352,7 +368,7 @@
       font-family: var(--sans);
     }
     .about-text h2 {
-      font-size: 30px;
+      font-size: 36px;
       font-weight: 400;
       color: var(--text);
       margin-bottom: 4px;
@@ -364,9 +380,9 @@
       margin-bottom: 20px;
     }
     .about-text p {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-mid);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       line-height: 1.75;
     }
     .about-stats {
@@ -393,16 +409,16 @@
 
     /* --- Contact --- */
     .contact-section {
-      max-width: 1100px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 60px 32px 80px;
+      padding: 60px 64px 80px;
       border-top: 1px solid var(--rule);
     }
     .contact-header {
       margin-bottom: 40px;
     }
     .contact-header h2 {
-      font-size: clamp(28px, 4vw, 38px);
+      font-size: clamp(32px, 4vw, 44px);
       font-weight: 400;
       color: var(--text);
       margin-bottom: 8px;
@@ -413,8 +429,8 @@
     }
     .contact-layout {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 56px;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
     }
     .contact-details {
       display: grid;
@@ -448,11 +464,11 @@
     .contact-form select,
     .contact-form textarea {
       width: 100%;
-      padding: 13px 16px;
+      padding: 16px 18px;
       border: 1px solid var(--rule);
       border-radius: 4px;
       font-family: var(--sans);
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text);
       background: #fff;
       transition: border-color 0.15s;
@@ -505,7 +521,7 @@
       .hero { min-height: 80vh; }
       .hero-content { padding: 100px 24px 60px; }
       .process-steps { grid-template-columns: 1fr 1fr; }
-      .practice-list { columns: 1; }
+      .practice-list { grid-template-columns: 1fr 1fr; }
       .about-section { grid-template-columns: 1fr; gap: 32px; }
       .about-photo { max-height: 280px; }
       .contact-layout { grid-template-columns: 1fr; }
@@ -557,6 +573,7 @@
         <span class="en">Immigration Law &middot; Silver Spring, Maryland</span>
         <span class="es">Derecho Migratorio &middot; Silver Spring, Maryland</span>
       </div>
+      <div class="hero-name">Aparisi <em>&</em> Associates</div>
       <h1>
         <span class="en">Your future is worth<br>fighting for.</span>
         <span class="es">Su futuro vale la pena<br>defenderlo.</span>
