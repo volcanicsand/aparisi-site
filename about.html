@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aparisi & Associates | Immigration Law</title>
-  <meta name="description" content="Aparisi & Associates — experienced immigration attorneys in Silver Spring, Maryland. Family-based petitions, removal defense, asylum, and more.">
+  <title>About | Aparisi & Associates</title>
+  <meta name="description" content="Learn about Jaime Winthuysen Aparisi, founder of Aparisi & Associates — over 26 years of immigration law experience serving the Washington, D.C. area.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -69,6 +69,7 @@
       transition: color 0.15s;
     }
     .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--text); font-weight: 500; }
     .nav-right {
       display: flex;
       align-items: center;
@@ -531,6 +532,26 @@
 
     /* --- Bilingual --- */
     [lang="es"] .en, [lang="en"] .es { display: none; }
+
+    /* --- Page Header --- */
+    .page-header {
+      background: var(--cream);
+      padding: 120px 0 56px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .page-header-inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+    .page-header-inner .section-eyebrow {
+      margin-bottom: 10px;
+    }
+    .page-header-inner h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 400;
+      color: var(--text);
+    }
   </style>
 </head>
 
@@ -544,11 +565,11 @@
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Aparisi <em>&</em> Associates</a>
+      <a href="index.html" class="nav-logo">Aparisi <em>&</em> Associates</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="how-it-works.html"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
         <li><a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas de Práctica</span></a></li>
-        <li><a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a></li>
+        <li><a href="about.html" class="active"><span class="en">About</span><span class="es">Nosotros</span></a></li>
         <li><a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a></li>
       </ul>
       <div class="nav-right">
@@ -564,43 +585,75 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="en">Immigration Law &middot; Silver Spring, Maryland</span>
-        <span class="es">Derecho Migratorio &middot; Silver Spring, Maryland</span>
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="section-eyebrow">
+        <span class="en">About the Firm</span>
+        <span class="es">Sobre la Firma</span>
       </div>
-      <div class="hero-name">Aparisi <em>&</em> Associates</div>
       <h1>
-        <span class="en">Your future is worth<br>fighting for.</span>
-        <span class="es">Su futuro vale la pena<br>defenderlo.</span>
+        <span class="en">Experience. Dedication. Results.</span>
+        <span class="es">Experiencia. Dedicación. Resultados.</span>
       </h1>
-      <p class="hero-sub">
-        <span class="en">Over 26 years helping families navigate the U.S. immigration system with experienced, personal legal counsel.</span>
-        <span class="es">Más de 26 años ayudando a familias a navegar el sistema migratorio con asesoría legal experimentada y personal.</span>
-      </p>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn btn-accent">
-          <span class="en">Schedule a Consultation</span>
-          <span class="es">Programe una Consulta</span>
-        </a>
-        <a href="tel:+13015621416" class="btn btn-ghost">
-          <span class="en">Call (301) 562-1416</span>
-          <span class="es">Llame (301) 562-1416</span>
-        </a>
-      </div>
-      <div class="hero-note">
-        <span class="en">Confidential &middot; Bilingual (EN/ES)</span>
-        <span class="es">Confidencial &middot; Bilingüe (EN/ES)</span>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <main class="main-content">
+    <div class="about-section">
+      <!-- Photo -->
+      <div class="about-photo">[Photo]</div>
+
+      <!-- Text -->
+      <div class="about-text">
+        <div class="section-eyebrow">
+          <span class="en">About the Firm</span>
+          <span class="es">Sobre la Firma</span>
+        </div>
+        <h2>Jaime Winthuysen Aparisi</h2>
+        <div class="about-role">
+          <span class="en">Founder &amp; Managing Attorney</span>
+          <span class="es">Fundador y Abogado Principal</span>
+        </div>
+
+        <p>
+          <span class="en">An immigrant and the son of immigrants, Jaime brings over 26 years of personal understanding and legal expertise to every case. He founded Aparisi &amp; Associates as a multilingual boutique firm dedicated to educating and empowering clients through every step of the immigration process.</span>
+          <span class="es">Inmigrante e hijo de inmigrantes, Jaime aporta más de 26 años de comprensión personal y experiencia legal a cada caso. Fundó Aparisi &amp; Associates como una firma boutique multilingüe dedicada a educar y empoderar a sus clientes en cada etapa del proceso migratorio.</span>
+        </p>
+
+        <p>
+          <span class="en">Based in Silver Spring, Maryland, the firm serves clients across the Washington, D.C. metropolitan area. We understand that every case represents a family's future — and we treat it that way.</span>
+          <span class="es">Con sede en Silver Spring, Maryland, la firma atiende a clientes en toda el área metropolitana de Washington, D.C. Entendemos que cada caso representa el futuro de una familia — y lo tratamos de esa manera.</span>
+        </p>
+
+        <!-- Stats -->
+        <div class="about-stats">
+          <div class="about-stat">
+            <strong>26+</strong>
+            <span>
+              <span class="en">Years of Experience</span>
+              <span class="es">Años de Experiencia</span>
+            </span>
+          </div>
+          <div class="about-stat">
+            <strong>1000s</strong>
+            <span>
+              <span class="en">Families Helped</span>
+              <span class="es">Familias Atendidas</span>
+            </span>
+          </div>
+          <div class="about-stat">
+            <strong>EN/ES</strong>
+            <span>
+              <span class="en">Bilingual Service</span>
+              <span class="es">Servicio Bilingüe</span>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
-
-
+  </main>
 
   <!-- Footer -->
   <footer>

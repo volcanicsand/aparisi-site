@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Aparisi & Associates</title>
+  <meta name="description" content="Contact Aparisi & Associates to schedule a confidential immigration law consultation. Located in Silver Spring, Maryland.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --accent: #2a6e5a;
+      --accent-light: #e8f0ec;
+      --accent-hover: #225a49;
+      --navy: #1a2535;
+      --cream: #faf8f5;
+      --warm-bg: #fdfbf8;
+      --text: #1a1a1a;
+      --text-mid: #4a4a4a;
+      --text-light: #777;
+      --rule: #e2ddd5;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--warm-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: var(--serif); line-height: 1.25; }
+    a { color: inherit; text-decoration: none; }
+
+    /* --- Nav --- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(253, 251, 248, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .nav-logo em { font-style: normal; color: var(--accent); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: var(--text-light);
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--accent); font-weight: 500; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-phone {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+    .nav-phone:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.15s;
+    }
+    .nav-cta:hover { background: var(--accent-hover); }
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      margin: 5px 0;
+    }
+
+    /* --- Language Toggle --- */
+    .lang-toggle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1001;
+      background: var(--accent);
+      padding: 0;
+      display: flex;
+    }
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      font-size: 18px;
+      font-family: var(--sans);
+      font-weight: 600;
+      padding: 22px 30px;
+      cursor: pointer;
+      transition: all 0.15s;
+      letter-spacing: 0.3px;
+    }
+    .lang-toggle button.active {
+      background: var(--accent-hover);
+      color: #fff;
+    }
+    .lang-toggle button:hover:not(.active) {
+      color: #fff;
+      background: rgba(0,0,0,0.1);
+    }
+
+    /* --- Page Header --- */
+    .page-header {
+      background: var(--cream);
+      padding: 140px 0 72px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .page-header-inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+    .page-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .page-header h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .page-header-sub {
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 520px;
+      line-height: 1.75;
+    }
+
+    /* --- Contact Section --- */
+    .contact-page-section {
+      background: var(--cream);
+      padding: 72px 0 100px;
+    }
+    .contact-page-inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 80px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    /* --- Contact Details --- */
+    .contact-details-col {}
+    .contact-details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .contact-detail strong {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .contact-detail span,
+    .contact-detail a {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .contact-detail a:hover { color: var(--accent); }
+
+    /* --- Contact Form --- */
+    .contact-form-col {}
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .form-row { display: flex; gap: 12px; }
+    .form-row > * { flex: 1; }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 16px 18px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      font-family: var(--sans);
+      font-size: 15px;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.15s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--text-light);
+    }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .contact-form select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23777' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+      padding-right: 44px;
+      cursor: pointer;
+    }
+    .contact-form select option[value=""] { color: var(--text-light); }
+    .contact-form textarea { resize: vertical; min-height: 130px; }
+    .form-submit {
+      margin-top: 4px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+      border: none;
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-accent:hover { background: var(--accent-hover); }
+
+    /* --- Footer --- */
+    footer {
+      background: var(--navy);
+      padding: 28px 0;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { transition: color 0.15s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+    /* --- Mobile --- */
+    @media (max-width: 768px) {
+      .nav-links, .nav-phone { display: none; }
+      .nav-hamburger { display: block; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0; right: 0;
+        background: var(--warm-bg);
+        padding: 20px 32px;
+        gap: 16px;
+        border-bottom: 1px solid var(--rule);
+      }
+      .page-header { padding: 120px 0 48px; }
+      .page-header-inner { padding: 0 24px; }
+      .contact-page-section { padding: 48px 0 72px; }
+      .contact-page-inner {
+        padding: 0 24px;
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .contact-details-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { flex-direction: column; }
+    }
+
+    /* --- Bilingual --- */
+    [lang="es"] .en, [lang="en"] .es { display: none; }
+  </style>
+</head>
+
+<body>
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="active" onclick="setLang('en')">English</button>
+    <button onclick="setLang('es')">Español</button>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Aparisi <em>&</em> Associates</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="how-it-works.html"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
+        <li><a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas de Práctica</span></a></li>
+        <li><a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a></li>
+        <li><a href="contact.html" class="active"><span class="en">Contact</span><span class="es">Contacto</span></a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:+13015621416" class="nav-phone">(301) 562-1416</a>
+        <a href="contact.html" class="nav-cta">
+          <span class="en">Let's Talk</span>
+          <span class="es">Hablemos</span>
+        </a>
+      </div>
+      <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-eyebrow">
+        <span class="en">Get in Touch</span>
+        <span class="es">Contáctenos</span>
+      </div>
+      <h1>
+        <span class="en">Schedule a Consultation</span>
+        <span class="es">Programe una Consulta</span>
+      </h1>
+      <p class="page-header-sub">
+        <span class="en">Take the first step. Contact us for a confidential consultation.</span>
+        <span class="es">Dé el primer paso. Contáctenos para una consulta confidencial.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact-page-section">
+    <div class="contact-page-inner">
+
+      <!-- Left: Contact Details -->
+      <div class="contact-details-col">
+        <div class="contact-details-grid">
+
+          <div class="contact-detail">
+            <strong><span class="en">Office</span><span class="es">Oficina</span></strong>
+            <span>819 Silver Spring Avenue<br>Silver Spring, MD 20910</span>
+          </div>
+
+          <div class="contact-detail">
+            <strong><span class="en">Phone</span><span class="es">Teléfono</span></strong>
+            <a href="tel:+13015621416">(301) 562-1416</a>
+          </div>
+
+          <div class="contact-detail">
+            <strong><span class="en">Email</span><span class="es">Correo</span></strong>
+            <a href="mailto:info@aparisi.com">info@aparisi.com</a>
+          </div>
+
+          <div class="contact-detail">
+            <strong><span class="en">Hours</span><span class="es">Horario</span></strong>
+            <span>
+              <span class="en">Mon &ndash; Fri, 9 AM &ndash; 6 PM</span>
+              <span class="es">Lun &ndash; Vie, 9 AM &ndash; 6 PM</span>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="contact-form-col">
+        <form class="contact-form" action="#" method="POST">
+
+          <div class="form-row">
+            <input type="text" name="first_name" placeholder="First Name / Nombre" required>
+            <input type="text" name="last_name" placeholder="Last Name / Apellido" required>
+          </div>
+
+          <input type="email" name="email" placeholder="Email / Correo electrónico" required>
+
+          <input type="tel" name="phone" placeholder="Phone / Teléfono">
+
+          <select name="practice_area">
+            <option value="">
+              <span class="en">Practice Area / Área de Práctica</span>
+            </option>
+            <option value="family"><span class="en">Family-Based Immigration</span><span class="es">Inmigración Familiar</span></option>
+            <option value="removal"><span class="en">Removal Defense</span><span class="es">Defensa contra la Deportación</span></option>
+            <option value="asylum"><span class="en">Asylum</span><span class="es">Asilo</span></option>
+            <option value="citizenship"><span class="en">Citizenship & Naturalization</span><span class="es">Ciudadanía y Naturalización</span></option>
+            <option value="daca"><span class="en">DACA & TPS</span><span class="es">DACA y TPS</span></option>
+            <option value="work"><span class="en">Work Visas</span><span class="es">Visas de Trabajo</span></option>
+            <option value="vawa"><span class="en">VAWA & Special Visas</span><span class="es">VAWA y Visas Especiales</span></option>
+            <option value="other"><span class="en">Other</span><span class="es">Otro</span></option>
+          </select>
+
+          <textarea name="message" placeholder="Tell us about your situation / Cuéntenos sobre su situación"></textarea>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-accent">
+              <span class="en">Send Message</span>
+              <span class="es">Enviar Mensaje</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; 2026 Aparisi & Associates LLC</span>
+      <div class="footer-links">
+        <a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas</span></a>
+        <a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a>
+        <a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-toggle button').forEach(btn => {
+        btn.classList.toggle('active', (lang === 'en' && btn.textContent.trim() === 'English') || (lang === 'es' && btn.textContent.trim() === 'Español'));
+      });
+    }
+  </script>
+</body>
+</html>

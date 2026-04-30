@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Areas | Aparisi & Associates</title>
+  <meta name="description" content="Aparisi & Associates handles family-based petitions, removal defense, asylum, employment visas, VAWA, DACA, U-Visas, SIJ, TPS, and naturalization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --accent: #2a6e5a;
+      --accent-light: #e8f0ec;
+      --accent-hover: #225a49;
+      --navy: #1a2535;
+      --cream: #faf8f5;
+      --warm-bg: #fdfbf8;
+      --text: #1a1a1a;
+      --text-mid: #4a4a4a;
+      --text-light: #777;
+      --rule: #e2ddd5;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Inter', -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--warm-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: var(--serif); line-height: 1.25; }
+    a { color: inherit; text-decoration: none; }
+
+    /* --- Nav --- */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(253, 251, 248, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .nav-logo em { font-style: normal; color: var(--accent); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: var(--text-light);
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--text); font-weight: 500; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-phone {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+    .nav-phone:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.15s;
+    }
+    .nav-cta:hover { background: var(--accent-hover); }
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      margin: 5px 0;
+    }
+
+    /* --- Language Toggle --- */
+    .lang-toggle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1001;
+      background: var(--accent);
+      padding: 0;
+      display: flex;
+    }
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      font-size: 18px;
+      font-family: var(--sans);
+      font-weight: 600;
+      padding: 22px 30px;
+      cursor: pointer;
+      transition: all 0.15s;
+      letter-spacing: 0.3px;
+    }
+    .lang-toggle button.active {
+      background: var(--accent-hover);
+      color: #fff;
+    }
+    .lang-toggle button:hover:not(.active) {
+      color: #fff;
+      background: rgba(0,0,0,0.1);
+    }
+
+    /* --- Section Shared --- */
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    /* --- Page Header --- */
+    .page-header {
+      background: var(--cream);
+      padding: 130px 0 72px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .page-header-inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+    .page-header-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .page-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+    .page-header-sub {
+      font-size: 18px;
+      color: var(--text-light);
+      font-weight: 300;
+      max-width: 620px;
+      line-height: 1.75;
+    }
+
+    /* --- Practice Areas List --- */
+    .practice-areas-section {
+      background: var(--cream);
+      padding: 80px 0 100px;
+    }
+    .practice-areas-inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+    .practice-area-item {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .practice-area-item:first-child {
+      border-top: 1px solid var(--rule);
+    }
+    .practice-area-left {
+      position: sticky;
+      top: 100px;
+    }
+    .practice-area-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      font-style: normal;
+    }
+    .practice-area-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 38px);
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .practice-area-title-es {
+      font-family: var(--serif);
+      font-size: clamp(20px, 2vw, 26px);
+      font-weight: 400;
+      color: var(--text-light);
+      line-height: 1.2;
+      font-style: italic;
+    }
+    .practice-area-right {
+      padding-top: 8px;
+    }
+    .practice-area-desc {
+      font-size: 17px;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .practice-area-desc:last-child {
+      margin-bottom: 0;
+    }
+    .practice-area-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 3px;
+      margin-top: 8px;
+    }
+
+    /* --- CTA Banner --- */
+    .cta-banner {
+      background: var(--navy);
+      padding: 80px 0;
+    }
+    .cta-banner-inner {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .cta-banner-text h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .cta-banner-text p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.55);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+    .cta-banner-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+      border: none;
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-accent:hover { background: var(--accent-hover); }
+    .btn-ghost-light {
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .btn-ghost-light:hover { border-color: rgba(255,255,255,0.45); color: #fff; }
+
+    /* --- Footer --- */
+    footer {
+      background: var(--navy);
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { transition: color 0.15s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+    /* --- Mobile --- */
+    @media (max-width: 900px) {
+      .practice-area-item {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .practice-area-left {
+        position: static;
+      }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-phone { display: none; }
+      .nav-hamburger { display: block; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0; right: 0;
+        background: var(--warm-bg);
+        padding: 20px 32px;
+        gap: 16px;
+        border-bottom: 1px solid var(--rule);
+      }
+      .page-header { padding: 110px 0 48px; }
+      .page-header-inner,
+      .practice-areas-inner,
+      .cta-banner-inner {
+        padding: 0 24px;
+      }
+      .cta-banner-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* --- Bilingual --- */
+    [lang="es"] .en, [lang="en"] .es { display: none; }
+  </style>
+</head>
+
+<body>
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="active" onclick="setLang('en')">English</button>
+    <button onclick="setLang('es')">Español</button>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Aparisi <em>&</em> Associates</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="how-it-works.html"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
+        <li><a href="practice-areas.html" class="active"><span class="en">Practice Areas</span><span class="es">Áreas de Práctica</span></a></li>
+        <li><a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a></li>
+        <li><a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:+13015621416" class="nav-phone">(301) 562-1416</a>
+        <a href="contact.html" class="nav-cta">
+          <span class="en">Let's Talk</span>
+          <span class="es">Hablemos</span>
+        </a>
+      </div>
+      <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-inner">
+      <div class="page-header-eyebrow">
+        <span class="en">What We Handle</span>
+        <span class="es">Lo Que Manejamos</span>
+      </div>
+      <h2>
+        <span class="en">Practice Areas</span>
+        <span class="es">Áreas de Práctica</span>
+      </h2>
+      <p class="page-header-sub">
+        <span class="en">With over 26 years of experience, we handle the full range of immigration matters — from keeping families together to fighting for those facing deportation.</span>
+        <span class="es">Con más de 26 años de experiencia, manejamos toda la gama de asuntos migratorios — desde mantener a las familias unidas hasta luchar por quienes enfrentan deportación.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section class="practice-areas-section">
+    <div class="practice-areas-inner">
+
+      <!-- 1. Family-Based Petitions -->
+      <div class="practice-area-item">
+        <div class="practice-area-left">
+          <div class="practice-area-num">01</div>
+          <div class="practice-area-title">
+            <span class="en">Family-Based Petitions</span>
+            <span class="es">Peticiones Familiares</span>
+          </div>
+          <div class="practice-area-title-es">
+            <span class="en">Peticiones Familiares</span>
+            <span class="es">Family-Based Petitions</span>
+          </div>
+          <span class="practice-area-tag">
+            <span class="en">Family Immigration</span>
+            <span class="es">Inmigración Familiar</span>
+          </span>
+        </div>
+        <div class="practice-area-right">
+          <p class="practice-area-desc en">
+            Family-based immigration allows U.S. citizens and lawful permanent residents to sponsor certain relatives for a green card. We guide petitioners and beneficiaries through every step: preparing and filing the I-130 petition, navigating consular processing or adjustment of status, and responding to any requests for evidence.
+          </p>
+          <p class="practice-area-desc en">
+            Whether you are sponsoring a spouse, child, parent, or sibling, the process involves strict eligibility requirements, priority dates, and documentary demands that can take years to resolve. Our experience means fewer delays, correct filings, and honest advice about realistic timelines.
+          </p>
+          <p class="practice-area-desc es">
+            La inmigración basada en la familia permite a ciudadanos estadounidenses y residentes permanentes patrocinar a ciertos familiares para una tarjeta verde. Guiamos a peticionarios y beneficiarios en cada paso: preparar y presentar la petición I-130, navegar el proceso consular o el ajuste de estatus, y responder a cualquier solicitud de evidencia.
+          </p>
+          <p class="practice-area-desc es">
+            Ya sea que esté patrocinando a un cónyuge, hijo, padre o hermano, el proceso implica requisitos estrictos de elegibilidad, fechas de prioridad y exigencias documentales que pueden tardar años en resolverse. Nuestra experiencia significa menos demoras, trámites correctos y asesoramiento honesto sobre plazos realistas.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Removal Defense -->
+      <div class="practice-area-item">
+        <div class="practice-area-left">
+          <div class="practice-area-num">02</div>
+          <div class="practice-area-title">
+            <span class="en">Removal Defense</span>
+            <span class="es">Defensa de Deportación</span>
+          </div>
+          <div class="practice-area-title-es">
+            <span class="en">Defensa de Deportación</span>
+            <span class="es">Removal Defense</span>
+          </div>
+          <span class="practice-area-tag">
+            <span class="en">Immigration Court</span>
+            <span class="es">Tribunal de Inmigración</span>
+          </span>
+        </div>
+        <div class="practice-area-right">
+          <p class="practice-area-desc en">
+            When the government initiates removal proceedings, you are entitled to a hearing before an immigration judge — and skilled representation can make the difference between deportation and remaining in the United States. We appear in immigration court on behalf of clients facing removal, arguing for cancellation, voluntary departure, asylum, or other forms of relief.
+          </p>
+          <p class="practice-area-desc en">
+            Removal cases move quickly and the stakes could not be higher. We have handled complex removal matters for clients with criminal histories, prior orders of removal, and lengthy unlawful presence. If a judge rules against our client, we also handle appeals to the Board of Immigration Appeals and the federal circuit courts.
+          </p>
+          <p class="practice-area-desc es">
+            Cuando el gobierno inicia procedimientos de deportación, tiene derecho a una audiencia ante un juez de inmigración — y la representación calificada puede marcar la diferencia entre la deportación y permanecer en los Estados Unidos. Comparecemos ante el tribunal de inmigración en nombre de clientes que enfrentan deportación, argumentando por cancelación, salida voluntaria, asilo u otras formas de alivio.
+          </p>
+          <p class="practice-area-desc es">
+            Los casos de deportación avanzan rápidamente y las apuestas no podrían ser más altas. Hemos manejado asuntos complejos de deportación para clientes con antecedentes penales, órdenes anteriores de deportación y prolongada presencia ilegal. Si un juez falla en contra de nuestro cliente, también manejamos apelaciones ante la Junta de Apelaciones de Inmigración y los tribunales federales de circuito.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Asylum & Credible Fear -->
+      <div class="practice-area-item">
+        <div class="practice-area-left">
+          <div class="practice-area-num">03</div>
+          <div class="practice-area-title">
+            <span class="en">Asylum &amp; Credible Fear</span>
+            <span class="es">Asilo y Miedo Creíble</span>
+          </div>
+          <div class="practice-area-title-es">
+            <span class="en">Asilo y Miedo Creíble</span>
+            <span class="es">Asylum &amp; Credible Fear</span>
+          </div>
+          <span class="practice-area-tag">
+            <span class="en">Protection &amp; Relief</span>
+            <span class="es">Protección y Alivio</span>
+          </span>
+        </div>
+        <div class="practice-area-right">
+          <p class="practice-area-desc en">
+            Asylum provides protection to individuals who have suffered persecution — or have a well-founded fear of persecution — based on race, religion, nationality, political opinion, or membership in a particular social group. We prepare and file affirmative asylum applications with USCIS and defend clients in defensive asylum proceedings before immigration judges.
+          </p>
+          <p class="practice-area-desc en">
+            For clients detained at the border or in immigration custody, a credible fear interview is often the first critical step. We work to prepare clients for these interviews, explain the legal standard, and ensure their story is presented completely and accurately. Country condition evidence, witness declarations, and expert testimony can all be vital to a successful claim.
+          </p>
+          <p class="practice-area-desc es">
+            El asilo brinda protección a personas que han sufrido persecución — o tienen un temor fundado de persecución — basada en raza, religión, nacionalidad, opinión política o membresía en un grupo social particular. Preparamos y presentamos solicitudes de asilo afirmativas ante USCIS y defendemos a clientes en procedimientos de asilo defensivo ante jueces de inmigración.
+          </p>
+          <p class="practice-area-desc es">
+            Para los clientes detenidos en la frontera o bajo custodia migratoria, una entrevista de miedo creíble es a menudo el primer paso crítico. Trabajamos para preparar a los clientes para estas entrevistas, explicamos el estándar legal y aseguramos que su historia sea presentada completa y con precisión. La evidencia sobre las condiciones del país, las declaraciones de testigos y el testimonio de expertos pueden ser fundamentales para una solicitud exitosa.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. Employment Visas & PERM -->
+      <div class="practice-area-item">
+        <div class="practice-area-left">
+          <div class="practice-area-num">04</div>
+          <div class="practice-area-title">
+            <span class="en">Employment Visas &amp; PERM</span>
+            <span class="es">Visas de Empleo y PERM</span>
+          </div>
+          <div class="practice-area-title-es">
+            <span class="en">Visas de Empleo y PERM</span>
+            <span class="es">Employment Visas &amp; PERM</span>
+          </div>
+          <span class="practice-area-tag">
+            <span class="en">Work Authorization</span>
+            <span class="es">Autorización de Trabajo</span>
+          </span>
+        </div>
+        <div class="practice-area-right">
+          <p class="practice-area-desc en">
+            Employment-based immigration covers a broad range of visa categories — from H-1B specialty occupation workers and L-1 intracompany transferees to O-1 individuals with extraordinary ability and EB-1 through EB-5 green card pathways. We advise both employers and employees on the visa category that best fits their situation, and we manage the full petition process from start to finish.
+          </p>
+          <p class="practice-area-desc en">
+            Labor Certification (PERM) is the required first step for many employment-based green cards, and it demands precise compliance with Department of Labor regulations. We handle prevailing wage determinations, recruitment documentation, and the ETA Form 9089 filing, and we respond to audits and denials when they arise.
+          </p>
+          <p class="practice-area-desc es">
+            La inmigración basada en empleo cubre una amplia gama de categorías de visa — desde trabajadores de especialidad H-1B y transferidos dentro de la empresa L-1 hasta individuos con habilidad extraordinaria O-1 y vías de tarjeta verde EB-1 a EB-5. Asesoramos tanto a empleadores como a empleados sobre la categoría de visa que mejor se adapta a su situación, y manejamos todo el proceso de petición de principio a fin.
+          </p>
+          <p class="practice-area-desc es">
+            La Certificación Laboral (PERM) es el primer paso requerido para muchas tarjetas verdes basadas en empleo, y exige un cumplimiento preciso de las regulaciones del Departamento de Trabajo. Manejamos determinaciones de salario prevaleciente, documentación de reclutamiento y la presentación del Formulario ETA 9089, y respondemos a auditorías y denegaciones cuando surgen.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5. VAWA, DACA & U-Visas -->
+      <div class="practice-area-item">
+        <div class="practice-area-left">
+          <div class="practice-area-num">05</div>
+          <div class="practice-area-title">
+            <span class="en">VAWA, DACA &amp; U-Visas</span>
+            <span class="es">VAWA, DACA y Visas U</span>
+          </div>
+          <div class="practice-area-title-es">
+            <span class="en">VAWA, DACA y Visas U</span>
+            <span class="es">VAWA, DACA &amp; U-Visas</span>
+          </div>
+          <span class="practice-area-tag">
+            <span class="en">Humanitarian Relief</span>
+            <span class="es">Alivio Humanitario</span>
+          </span>
+        </div>
+        <div class="practice-area-right">
+          <p class="practice-area-desc en">
+            The Violence Against Women Act (VAWA) allows victims of domestic abuse to self-petition for lawful permanent residence without the knowledge or cooperation of the abusing spouse or parent. We handle VAWA self-petitions with strict confidentiality, helping survivors document abuse, establish the qualifying relationship, and navigate USCIS review.
+          </p>
+          <p class="practice-area-desc en">
+            U-Visas provide immigration relief to crime victims who have suffered serious abuse and have been, are being, or are likely to be helpful to law enforcement. DACA (Deferred Action for Childhood Arrivals) provides temporary protection and work authorization to qualifying individuals who arrived in the U.S. as children. We assist with initial applications, renewals, and planning for long-term status options.
+          </p>
+          <p class="practice-area-desc es">
+            La Ley de Violencia contra la Mujer (VAWA) permite a las víctimas de abuso doméstico autopeticionarse para la residencia permanente legal sin el conocimiento ni la cooperación del cónyuge o padre abusador. Manejamos las autopeticiones VAWA con estricta confidencialidad, ayudando a los sobrevivientes a documentar el abuso, establecer la relación calificante y navegar la revisión de USCIS.
+          </p>
+          <p class="practice-area-desc es">
+            Las Visas U brindan alivio migratorio a las víctimas de delitos que han sufrido abusos graves y han sido, están siendo o es probable que sean útiles para las fuerzas del orden. DACA (Acción Diferida para los Llegados en la Infancia) brinda protección temporal y autorización de trabajo a personas calificadas que llegaron a los EE. UU. cuando eran niños. Asistimos con solicitudes iniciales, renovaciones y planificación para opciones de estatus a largo plazo.
+          </p>
+        </div>
+      </div>
+
+      <!-- 6. Special Immigrant Juvenile -->
+      <div class="practice-area-item">
+        <div class="practice-area-left">
+          <div class="practice-area-num">06</div>
+          <div class="practice-area-title">
+            <span class="en">Special Immigrant Juvenile</span>
+            <span class="es">Inmigrante Juvenil Especial</span>
+          </div>
+          <div class="practice-area-title-es">
+            <span class="en">Inmigrante Juvenil Especial</span>
+            <span class="es">Special Immigrant Juvenile</span>
+          </div>
+          <span class="practice-area-tag">
+            <span class="en">Children's Relief</span>
+            <span class="es">Alivio para Menores</span>
+          </span>
+        </div>
+        <div class="practice-area-right">
+          <p class="practice-area-desc en">
+            Special Immigrant Juvenile Status (SIJS) offers a pathway to lawful permanent residence for children who have been abused, neglected, or abandoned by one or both parents and who have received a qualifying court order from a state juvenile or family court. We work with families and guardians to obtain the necessary state court findings and then file the I-360 petition and I-485 adjustment of status with USCIS.
+          </p>
+          <p class="practice-area-desc en">
+            SIJS cases require close coordination between state court proceedings and federal immigration processes. We are experienced navigating both, and we understand the sensitivity required when representing vulnerable young clients. Time is often critical, as eligibility ends when a child turns 21.
+          </p>
+          <p class="practice-area-desc es">
+            El Estatus de Inmigrante Juvenil Especial (SIJS) ofrece un camino hacia la residencia permanente legal para niños que han sido abusados, descuidados o abandonados por uno o ambos padres y que han recibido una orden judicial calificante de un tribunal juvenil o familiar estatal. Trabajamos con familias y tutores para obtener los hallazgos necesarios del tribunal estatal y luego presentamos la petición I-360 y el ajuste de estatus I-485 ante USCIS.
+          </p>
+          <p class="practice-area-desc es">
+            Los casos de SIJS requieren una estrecha coordinación entre los procedimientos del tribunal estatal y los procesos de inmigración federal. Tenemos experiencia navegando ambos, y entendemos la sensibilidad requerida al representar a clientes jóvenes vulnerables. El tiempo suele ser crítico, ya que la elegibilidad termina cuando un niño cumple 21 años.
+          </p>
+        </div>
+      </div>
+
+      <!-- 7. TPS & Advance Parole -->
+      <div class="practice-area-item">
+        <div class="practice-area-left">
+          <div class="practice-area-num">07</div>
+          <div class="practice-area-title">
+            <span class="en">TPS &amp; Advance Parole</span>
+            <span class="es">TPS y Permiso Adelantado</span>
+          </div>
+          <div class="practice-area-title-es">
+            <span class="en">TPS y Permiso Adelantado</span>
+            <span class="es">TPS &amp; Advance Parole</span>
+          </div>
+          <span class="practice-area-tag">
+            <span class="en">Temporary Protection</span>
+            <span class="es">Protección Temporal</span>
+          </span>
+        </div>
+        <div class="practice-area-right">
+          <p class="practice-area-desc en">
+            Temporary Protected Status (TPS) is a humanitarian benefit that allows nationals of designated countries experiencing ongoing armed conflict, environmental disasters, or other extraordinary conditions to live and work legally in the United States. We assist clients with initial TPS registration, re-registration during renewal periods, and Employment Authorization Document (EAD) applications.
+          </p>
+          <p class="practice-area-desc en">
+            Advance Parole is a travel document that allows certain individuals — including TPS holders, DACA recipients, and pending adjustment applicants — to travel abroad and return to the United States without abandoning their immigration case. Understanding when and how to use Advance Parole is critical; traveling without it can result in the triggering of bars to reentry. We advise clients carefully on the risks and requirements before any international travel.
+          </p>
+          <p class="practice-area-desc es">
+            El Estatus de Protección Temporal (TPS) es un beneficio humanitario que permite a los nacionales de países designados que experimentan conflictos armados en curso, desastres ambientales u otras condiciones extraordinarias vivir y trabajar legalmente en los Estados Unidos. Asistimos a los clientes con el registro inicial de TPS, la reregistración durante los períodos de renovación y las solicitudes de Documento de Autorización de Empleo (EAD).
+          </p>
+          <p class="practice-area-desc es">
+            El Permiso Adelantado (Advance Parole) es un documento de viaje que permite a ciertas personas — incluidos los titulares de TPS, los beneficiarios de DACA y los solicitantes de ajuste pendientes — viajar al extranjero y regresar a los Estados Unidos sin abandonar su caso de inmigración. Entender cuándo y cómo usar el Permiso Adelantado es crítico; viajar sin él puede resultar en la activación de barreras para el reingreso. Asesoramos cuidadosamente a los clientes sobre los riesgos y requisitos antes de cualquier viaje internacional.
+          </p>
+        </div>
+      </div>
+
+      <!-- 8. Naturalization -->
+      <div class="practice-area-item">
+        <div class="practice-area-left">
+          <div class="practice-area-num">08</div>
+          <div class="practice-area-title">
+            <span class="en">Naturalization</span>
+            <span class="es">Naturalización</span>
+          </div>
+          <div class="practice-area-title-es">
+            <span class="en">Naturalización</span>
+            <span class="es">Naturalization</span>
+          </div>
+          <span class="practice-area-tag">
+            <span class="en">U.S. Citizenship</span>
+            <span class="es">Ciudadanía Estadounidense</span>
+          </span>
+        </div>
+        <div class="practice-area-right">
+          <p class="practice-area-desc en">
+            Naturalization is the process by which a lawful permanent resident becomes a U.S. citizen. Most applicants must demonstrate five years of continuous residence (three years if married to a U.S. citizen), good moral character, English language ability, and knowledge of U.S. civics. We review eligibility carefully — particularly for clients with criminal records or extended absences from the country — before filing the N-400 application.
+          </p>
+          <p class="practice-area-desc en">
+            We prepare clients thoroughly for the naturalization interview and civics test and accompany them when needed. For clients who may face complications — including questions about moral character, past immigration violations, or tax issues — we provide honest guidance so there are no surprises at the interview. Achieving citizenship is one of the most meaningful milestones in an immigration journey, and we treat it with the care it deserves.
+          </p>
+          <p class="practice-area-desc es">
+            La naturalización es el proceso por el cual un residente permanente legal se convierte en ciudadano estadounidense. La mayoría de los solicitantes deben demostrar cinco años de residencia continua (tres años si están casados con un ciudadano estadounidense), buena conducta moral, conocimiento del idioma inglés y conocimiento de los asuntos cívicos de los EE. UU. Revisamos la elegibilidad cuidadosamente — particularmente para clientes con antecedentes penales o ausencias prolongadas del país — antes de presentar la solicitud N-400.
+          </p>
+          <p class="practice-area-desc es">
+            Preparamos a los clientes a fondo para la entrevista de naturalización y el examen de cívica, y los acompañamos cuando es necesario. Para los clientes que pueden enfrentar complicaciones — incluidas preguntas sobre conducta moral, violaciones previas de inmigración o problemas fiscales — brindamos orientación honesta para que no haya sorpresas en la entrevista. Obtener la ciudadanía es uno de los hitos más significativos en un viaje de inmigración, y lo tratamos con el cuidado que merece.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-banner-inner">
+      <div class="cta-banner-text">
+        <h2>
+          <span class="en">Ready to discuss your case?</span>
+          <span class="es">&iquest;Listo para hablar sobre su caso?</span>
+        </h2>
+        <p>
+          <span class="en">Schedule a confidential consultation with our team. We work in English and Spanish, and we'll give you an honest assessment of your options.</span>
+          <span class="es">Programe una consulta confidencial con nuestro equipo. Trabajamos en inglés y español, y le daremos una evaluación honesta de sus opciones.</span>
+        </p>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="contact.html" class="btn btn-accent">
+          <span class="en">Schedule a Consultation</span>
+          <span class="es">Programe una Consulta</span>
+        </a>
+        <a href="tel:+13015621416" class="btn btn-ghost-light">
+          <span class="en">Call (301) 562-1416</span>
+          <span class="es">Llame (301) 562-1416</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; 2026 Aparisi &amp; Associates LLC</span>
+      <div class="footer-links">
+        <a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas</span></a>
+        <a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a>
+        <a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-toggle button').forEach(btn => {
+        btn.classList.toggle('active', (lang === 'en' && btn.textContent.trim() === 'English') || (lang === 'es' && btn.textContent.trim() === 'Español'));
+      });
+    }
+  </script>
+</body>
+</html>
