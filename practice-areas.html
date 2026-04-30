@@ -3,204 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practice Areas | Aparisi Law</title>
+  <title>How We Help | Aparisi Law</title>
   <meta name="description" content="Aparisi Law handles family-based petitions, removal defense, asylum, employment visas, VAWA, DACA, U-Visas, SIJ, TPS, and naturalization.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --accent: #2a6e5a;
-      --accent-light: #e8f0ec;
-      --accent-hover: #225a49;
-      --navy: #1a2535;
-      --cream: #faf8f5;
-      --warm-bg: #fdfbf8;
-      --text: #1a1a1a;
-      --text-mid: #4a4a4a;
-      --text-light: #777;
-      --rule: #e2ddd5;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'Inter', -apple-system, sans-serif;
-    }
-
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--sans);
-      color: var(--text);
-      line-height: 1.7;
-      background: var(--warm-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3 { font-family: var(--serif); line-height: 1.25; }
-    a { color: inherit; text-decoration: none; }
-
-    /* --- Nav --- */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: transparent;
-      border-bottom: none;
-    }
-    .nav-inner {
-      max-width: 1800px;
-      margin: 0 auto;
-      padding: 0 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-    }
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 600;
-      color: #fff;
-    }
-    .nav-logo em { font-style: normal; color: rgba(255,255,255,0.5); }
-    .logo-mark { margin-right: 8px; vertical-align: -4px; }
-    .nav-links { display: flex; gap: 48px; list-style: none; }
-    .nav-links a {
-      color: rgba(255,255,255,0.7);
-      font-size: 22px;
-      font-weight: 400;
-      transition: color 0.15s;
-    }
-    .nav-links a:hover { color: #fff; }
-    .nav-links a.active { color: #fff; font-weight: 500; }
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .nav-phone {
-      color: rgba(255,255,255,0.7);
-      font-size: 22px;
-    }
-    .nav-phone:hover { color: #fff; }
-    .nav-cta {
-      background: var(--accent);
-      color: #fff;
-      font-size: 20px;
-      font-weight: 500;
-      padding: 18px 38px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: var(--sans);
-      transition: background 0.15s;
-    }
-    .nav-cta:hover { background: var(--accent-hover); }
-    .nav-hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #fff;
-      margin: 5px 0;
-    }
-
-    /* --- Language Toggle --- */
-    .lang-toggle {
-      display: flex;
-      gap: 2px;
-    }
-    .lang-toggle button {
-      border: none;
-      background: transparent;
-      color: rgba(255,255,255,0.45);
-      font-size: 11px;
-      font-family: var(--sans);
-      font-weight: 600;
-      padding: 6px 8px;
-      cursor: pointer;
-      transition: color 0.15s;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .lang-toggle button.active {
-      color: #fff;
-    }
-    .lang-toggle button:hover:not(.active) {
-      color: rgba(255,255,255,0.8);
-    }
-
-    /* --- Section Shared --- */
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-    .section-eyebrow {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 14px;
-    }
-
-    /* --- Page Header --- */
-    .page-header {
-      position: relative;
-      background: var(--navy);
-      padding: 140px 0 72px;
-      overflow: hidden;
-    }
-    .page-header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(26,37,53,0.98) 0%, rgba(42,110,90,0.25) 100%);
-    }
-    .page-header-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 1800px;
-      margin: 0 auto;
-      padding: 0 80px;
-    }
-    .page-header-eyebrow {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 16px;
-    }
-    .page-header h2 {
-      font-family: var(--serif);
-      font-size: clamp(40px, 5vw, 64px);
-      font-weight: 400;
-      color: #fff;
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
-    }
-    .page-header-sub {
-      font-size: 18px;
-      color: rgba(255,255,255,0.55);
-      font-weight: 300;
-      max-width: 620px;
-      line-height: 1.75;
-    }
-
     /* --- Practice Areas List --- */
     .practice-areas-section {
       background: var(--warm-bg);
-      padding: 0 0 0;
     }
     .practice-areas-inner {
       max-width: 1800px;
       margin: 0 auto;
-      padding: 0;
     }
     .practice-area-item {
       padding: 64px 80px;
@@ -209,12 +24,8 @@
       gap: 80px;
       align-items: start;
     }
-    .practice-area-item:nth-child(odd) {
-      background: var(--warm-bg);
-    }
-    .practice-area-item:nth-child(even) {
-      background: var(--accent-light);
-    }
+    .practice-area-item:nth-child(odd) { background: var(--warm-bg); }
+    .practice-area-item:nth-child(even) { background: var(--accent-light); }
     .practice-area-left {
       position: sticky;
       top: 100px;
@@ -225,7 +36,6 @@
       color: var(--accent);
       letter-spacing: -2px;
       margin-bottom: 12px;
-      font-style: normal;
       opacity: 0.3;
     }
     .practice-area-title {
@@ -244,18 +54,14 @@
       line-height: 1.2;
       font-style: italic;
     }
-    .practice-area-right {
-      padding-top: 8px;
-    }
+    .practice-area-right { padding-top: 8px; }
     .practice-area-desc {
       font-size: 17px;
       color: var(--text-mid);
       line-height: 1.8;
       margin-bottom: 20px;
     }
-    .practice-area-desc:last-child {
-      margin-bottom: 0;
-    }
+    .practice-area-desc:last-child { margin-bottom: 0; }
     .practice-area-tag {
       display: inline-block;
       background: var(--accent-light);
@@ -269,127 +75,17 @@
       margin-top: 8px;
     }
 
-    /* --- CTA Banner --- */
-    .cta-banner {
-      background: var(--navy);
-      padding: 80px 0;
-    }
-    .cta-banner-inner {
-      max-width: 1800px;
-      margin: 0 auto;
-      padding: 0 80px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
-    .cta-banner-text h2 {
-      font-family: var(--serif);
-      font-size: clamp(28px, 3.5vw, 42px);
-      font-weight: 400;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-    .cta-banner-text p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.55);
-      max-width: 480px;
-      line-height: 1.7;
-    }
-    .cta-banner-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-      flex-shrink: 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      font-family: var(--sans);
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.15s;
-      border: none;
-    }
-    .btn-accent {
-      background: var(--accent);
-      color: #fff;
-    }
-    .btn-accent:hover { background: var(--accent-hover); }
-    .btn-ghost-light {
-      background: transparent;
-      color: rgba(255,255,255,0.7);
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-    .btn-ghost-light:hover { border-color: rgba(255,255,255,0.45); color: #fff; }
-
-    /* --- Footer --- */
-    footer {
-      background: var(--navy);
-      padding: 28px 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.4);
-    }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { transition: color 0.15s; }
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
-
-    /* --- Mobile --- */
     @media (max-width: 900px) {
       .practice-area-item {
         grid-template-columns: 1fr;
         gap: 24px;
         padding: 48px 40px;
       }
-      .practice-area-left {
-        position: static;
-      }
+      .practice-area-left { position: static; }
     }
     @media (max-width: 768px) {
-      .nav-links, .nav-phone { display: none; }
-      .nav-hamburger { display: block; }
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 68px;
-        left: 0; right: 0;
-        background: var(--warm-bg);
-        padding: 20px 32px;
-        gap: 16px;
-        border-bottom: 1px solid var(--rule);
-      }
-      .page-header { padding: 110px 0 48px; }
-      .page-header-inner,
-      .cta-banner-inner {
-        padding: 0 24px;
-      }
-      .practice-area-item {
-        padding: 40px 24px;
-      }
-      .cta-banner-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .practice-area-item { padding: 40px 24px; }
     }
-
-    /* --- Bilingual --- */
-    [lang="es"] .en, [lang="en"] .es { display: none; }
   </style>
 </head>
 
@@ -422,18 +118,18 @@
   </nav>
 
   <!-- Page Header -->
-  <section class="page-header">
+  <header class="page-header">
     <div class="page-header-inner">
-      <h2>
+      <h1>
         <span class="en">How We Can Help</span>
         <span class="es">Cómo Podemos Ayudar</span>
-      </h2>
+      </h1>
       <p class="page-header-sub">
         <span class="en">Whatever your immigration situation, we have the experience to guide you through it — from keeping families together to defending those facing deportation.</span>
         <span class="es">Cualquiera que sea su situación migratoria, tenemos la experiencia para guiarlo — desde mantener a las familias unidas hasta defender a quienes enfrentan deportación.</span>
       </p>
     </div>
-  </section>
+  </header>
 
   <!-- Practice Areas -->
   <section class="practice-areas-section">
@@ -737,20 +433,13 @@
     <div class="footer-inner">
       <span>&copy; 2026 Aparisi Law LLC</span>
       <div class="footer-links">
-        <a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas</span></a>
+        <a href="practice-areas.html"><span class="en">How We Help</span><span class="es">Cómo Ayudamos</span></a>
         <a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a>
         <a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a>
       </div>
     </div>
   </footer>
 
-  <script>
-    function setLang(lang) {
-      document.documentElement.lang = lang;
-      document.querySelectorAll('.lang-toggle button').forEach(btn => {
-        btn.classList.toggle('active', (lang === 'en' && btn.textContent.trim() === 'EN') || (lang === 'es' && btn.textContent.trim() === 'ES'));
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

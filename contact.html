@@ -7,173 +7,8 @@
   <meta name="description" content="Contact Aparisi Law to schedule a confidential immigration law consultation. Located in Silver Spring, Maryland.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --accent: #2a6e5a;
-      --accent-light: #e8f0ec;
-      --accent-hover: #225a49;
-      --navy: #1a2535;
-      --cream: #faf8f5;
-      --warm-bg: #fdfbf8;
-      --text: #1a1a1a;
-      --text-mid: #4a4a4a;
-      --text-light: #777;
-      --rule: #e2ddd5;
-      --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'Inter', -apple-system, sans-serif;
-    }
-
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--sans);
-      color: var(--text);
-      line-height: 1.7;
-      background: var(--warm-bg);
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3 { font-family: var(--serif); line-height: 1.25; }
-    a { color: inherit; text-decoration: none; }
-
-    /* --- Nav --- */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: transparent;
-      border-bottom: none;
-    }
-    .nav-inner {
-      max-width: 1800px;
-      margin: 0 auto;
-      padding: 0 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-    }
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 600;
-      color: #fff;
-    }
-    .nav-logo em { font-style: normal; color: rgba(255,255,255,0.5); }
-    .logo-mark { margin-right: 8px; vertical-align: -4px; }
-    .nav-links { display: flex; gap: 48px; list-style: none; }
-    .nav-links a {
-      color: rgba(255,255,255,0.7);
-      font-size: 22px;
-      font-weight: 400;
-      transition: color 0.15s;
-    }
-    .nav-links a:hover { color: #fff; }
-    .nav-links a.active { color: #fff; font-weight: 500; }
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .nav-phone {
-      color: rgba(255,255,255,0.7);
-      font-size: 22px;
-    }
-    .nav-phone:hover { color: #fff; }
-    .nav-cta {
-      background: var(--accent);
-      color: #fff;
-      font-size: 20px;
-      font-weight: 500;
-      padding: 18px 38px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: var(--sans);
-      transition: background 0.15s;
-    }
-    .nav-cta:hover { background: var(--accent-hover); }
-    .nav-hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #fff;
-      margin: 5px 0;
-    }
-
-    /* --- Language Toggle --- */
-    .lang-toggle {
-      display: flex;
-      gap: 2px;
-    }
-    .lang-toggle button {
-      border: none;
-      background: transparent;
-      color: rgba(255,255,255,0.45);
-      font-size: 11px;
-      font-family: var(--sans);
-      font-weight: 600;
-      padding: 6px 8px;
-      cursor: pointer;
-      transition: color 0.15s;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .lang-toggle button.active {
-      color: #fff;
-    }
-    .lang-toggle button:hover:not(.active) {
-      color: rgba(255,255,255,0.8);
-    }
-
-    /* --- Page Header --- */
-    .page-header {
-      position: relative;
-      background: var(--navy);
-      padding: 140px 0 72px;
-      overflow: hidden;
-    }
-    .page-header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(145deg, rgba(26,37,53,0.97) 0%, rgba(42,110,90,0.2) 100%);
-    }
-    .page-header-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 1800px;
-      margin: 0 auto;
-      padding: 0 80px;
-    }
-    .page-eyebrow {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 14px;
-    }
-    .page-header h1 {
-      font-size: clamp(36px, 5vw, 58px);
-      font-weight: 400;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-    .page-header-sub {
-      font-size: 17px;
-      color: rgba(255,255,255,0.55);
-      max-width: 520px;
-      line-height: 1.75;
-    }
-
     /* --- Contact Section --- */
     .contact-page-section {
       background: var(--cream);
@@ -188,9 +23,6 @@
       gap: 80px;
       align-items: start;
     }
-
-    /* --- Contact Details --- */
-    .contact-details-col {}
     .contact-details-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -214,7 +46,6 @@
     .contact-detail a:hover { color: var(--accent); }
 
     /* --- Contact Form --- */
-    .contact-form-col {}
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -256,76 +87,17 @@
     }
     .contact-form select option[value=""] { color: var(--text-light); }
     .contact-form textarea { resize: vertical; min-height: 130px; }
-    .form-submit {
-      margin-top: 4px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 32px;
-      font-family: var(--sans);
-      font-size: 14px;
-      font-weight: 500;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.15s;
-      border: none;
-    }
-    .btn-accent {
-      background: var(--accent);
-      color: #fff;
-    }
-    .btn-accent:hover { background: var(--accent-hover); }
+    .form-submit { margin-top: 4px; }
 
-    /* --- Footer --- */
-    footer {
-      background: var(--navy);
-      padding: 28px 0;
-    }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.4);
-    }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { transition: color 0.15s; }
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
-
-    /* --- Mobile --- */
     @media (max-width: 768px) {
-      .nav-links, .nav-phone { display: none; }
-      .nav-hamburger { display: block; }
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 68px;
-        left: 0; right: 0;
-        background: var(--warm-bg);
-        padding: 20px 32px;
-        gap: 16px;
-        border-bottom: 1px solid var(--rule);
-      }
-      .page-header { padding: 120px 0 48px; }
-      .page-header-inner { padding: 0 24px; }
       .contact-page-section { padding: 48px 0 72px; }
       .contact-page-inner {
         padding: 0 24px;
         grid-template-columns: 1fr;
         gap: 48px;
       }
-      .contact-details-grid { grid-template-columns: 1fr 1fr; }
       .form-row { flex-direction: column; }
     }
-
-    /* --- Bilingual --- */
-    [lang="es"] .en, [lang="en"] .es { display: none; }
   </style>
 </head>
 
@@ -358,7 +130,7 @@
   </nav>
 
   <!-- Page Header -->
-  <div class="page-header">
+  <header class="page-header">
     <div class="page-header-inner">
       <div class="page-eyebrow">
         <span class="en">Get in Touch</span>
@@ -373,7 +145,7 @@
         <span class="es">Dé el primer paso. Contáctenos para una consulta confidencial.</span>
       </p>
     </div>
-  </div>
+  </header>
 
   <!-- Contact Section -->
   <section class="contact-page-section">
@@ -423,17 +195,15 @@
           <input type="tel" name="phone" placeholder="Phone / Teléfono">
 
           <select name="practice_area">
-            <option value="">
-              <span class="en">Practice Area / Área de Práctica</span>
-            </option>
-            <option value="family"><span class="en">Family-Based Immigration</span><span class="es">Inmigración Familiar</span></option>
-            <option value="removal"><span class="en">Removal Defense</span><span class="es">Defensa contra la Deportación</span></option>
-            <option value="asylum"><span class="en">Asylum</span><span class="es">Asilo</span></option>
-            <option value="citizenship"><span class="en">Citizenship & Naturalization</span><span class="es">Ciudadanía y Naturalización</span></option>
-            <option value="daca"><span class="en">DACA & TPS</span><span class="es">DACA y TPS</span></option>
-            <option value="work"><span class="en">Work Visas</span><span class="es">Visas de Trabajo</span></option>
-            <option value="vawa"><span class="en">VAWA & Special Visas</span><span class="es">VAWA y Visas Especiales</span></option>
-            <option value="other"><span class="en">Other</span><span class="es">Otro</span></option>
+            <option value="">Practice Area / Área de Práctica</option>
+            <option value="family">Family-Based Immigration / Inmigración Familiar</option>
+            <option value="removal">Removal Defense / Defensa contra la Deportación</option>
+            <option value="asylum">Asylum / Asilo</option>
+            <option value="citizenship">Citizenship &amp; Naturalization / Ciudadanía y Naturalización</option>
+            <option value="daca">DACA &amp; TPS</option>
+            <option value="work">Work Visas / Visas de Trabajo</option>
+            <option value="vawa">VAWA &amp; Special Visas / VAWA y Visas Especiales</option>
+            <option value="other">Other / Otro</option>
           </select>
 
           <textarea name="message" placeholder="Tell us about your situation / Cuéntenos sobre su situación"></textarea>
@@ -456,20 +226,13 @@
     <div class="footer-inner">
       <span>&copy; 2026 Aparisi Law LLC</span>
       <div class="footer-links">
-        <a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas</span></a>
+        <a href="practice-areas.html"><span class="en">How We Help</span><span class="es">Cómo Ayudamos</span></a>
         <a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a>
         <a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a>
       </div>
     </div>
   </footer>
 
-  <script>
-    function setLang(lang) {
-      document.documentElement.lang = lang;
-      document.querySelectorAll('.lang-toggle button').forEach(btn => {
-        btn.classList.toggle('active', (lang === 'en' && btn.textContent.trim() === 'EN') || (lang === 'es' && btn.textContent.trim() === 'ES'));
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
