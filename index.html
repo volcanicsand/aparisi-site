@@ -110,31 +110,34 @@
     /* --- Language Toggle --- */
     .lang-toggle {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 24px;
+      right: 24px;
       z-index: 1001;
       background: var(--navy);
-      border-radius: 20px;
-      padding: 3px;
+      border-radius: 28px;
+      padding: 4px;
       display: flex;
-      gap: 2px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      gap: 3px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
     .lang-toggle button {
       border: none;
       background: transparent;
-      color: rgba(255,255,255,0.45);
-      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
       font-family: var(--sans);
       font-weight: 600;
-      padding: 5px 11px;
-      border-radius: 16px;
+      padding: 10px 20px;
+      border-radius: 24px;
       cursor: pointer;
       transition: all 0.2s;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.3px;
     }
     .lang-toggle button.active {
       background: var(--accent);
+      color: #fff;
+    }
+    .lang-toggle button:hover:not(.active) {
       color: #fff;
     }
 
@@ -558,8 +561,8 @@
 <body>
   <!-- Language Toggle -->
   <div class="lang-toggle">
-    <button class="active" onclick="setLang('en')">EN</button>
-    <button onclick="setLang('es')">ES</button>
+    <button class="active" onclick="setLang('en')">English</button>
+    <button onclick="setLang('es')">Español</button>
   </div>
 
   <!-- Nav -->
@@ -846,7 +849,7 @@
     function setLang(lang) {
       document.documentElement.lang = lang;
       document.querySelectorAll('.lang-toggle button').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+        btn.classList.toggle('active', (lang === 'en' && btn.textContent.trim() === 'English') || (lang === 'es' && btn.textContent.trim() === 'Español'));
       });
     }
   </script>
