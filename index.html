@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aparisi & Associates | Immigration Law</title>
-  <meta name="description" content="Aparisi & Associates — experienced immigration attorneys in Silver Spring, Maryland. Family-based petitions, removal defense, asylum, and more.">
+  <title>Aparisi Law | Immigration Attorneys</title>
+  <meta name="description" content="Aparisi Law — experienced immigration attorneys in Silver Spring, Maryland. Family-based petitions, removal defense, asylum, and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -60,6 +60,7 @@
       color: #fff;
     }
     .nav-logo em { font-style: normal; color: rgba(255,255,255,0.5); }
+    .logo-mark { margin-right: 8px; vertical-align: -4px; }
     .nav-links { display: flex; gap: 48px; list-style: none; }
     .nav-links a {
       color: rgba(255,255,255,0.7);
@@ -108,33 +109,27 @@
 
     /* --- Language Toggle --- */
     .lang-toggle {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1001;
-      background: var(--accent);
-      padding: 0;
       display: flex;
+      gap: 2px;
     }
     .lang-toggle button {
       border: none;
       background: transparent;
-      color: rgba(255,255,255,0.6);
-      font-size: 18px;
+      color: rgba(255,255,255,0.45);
+      font-size: 11px;
       font-family: var(--sans);
       font-weight: 600;
-      padding: 22px 30px;
+      padding: 6px 8px;
       cursor: pointer;
-      transition: all 0.15s;
-      letter-spacing: 0.3px;
+      transition: color 0.15s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
     .lang-toggle button.active {
-      background: var(--accent-hover);
       color: #fff;
     }
     .lang-toggle button:hover:not(.active) {
-      color: #fff;
-      background: rgba(0,0,0,0.1);
+      color: rgba(255,255,255,0.8);
     }
 
     /* --- Hero --- */
@@ -559,16 +554,10 @@
 </head>
 
 <body>
-  <!-- Language Toggle -->
-  <div class="lang-toggle">
-    <button class="active" onclick="setLang('en')">English</button>
-    <button onclick="setLang('es')">Español</button>
-  </div>
-
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo"></a>
+      <a href="index.html" class="nav-logo"><svg class="logo-mark" width="24" height="26" viewBox="0 0 56 60" fill="none"><polygon points="22,2 44,58 0,58" fill="rgba(255,255,255,0.3)"/><polygon points="34,2 56,58 12,58" fill="rgba(255,255,255,0.75)"/></svg>Aparisi Law</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a></li>
         <li><a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas de Práctica</span></a></li>
@@ -576,6 +565,10 @@
         <li><a href="contact.html"><span class="en">Contact</span><span class="es">Contacto</span></a></li>
       </ul>
       <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="active" onclick="setLang('en')">EN</button>
+          <button onclick="setLang('es')">ES</button>
+        </div>
         <a href="tel:+13015621416" class="nav-phone">(301) 562-1416</a>
         <a href="contact.html" class="nav-cta">
           <span class="en">Let's Talk</span>
@@ -593,7 +586,7 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-name">Aparisi <em>&</em> Associates</div>
+      <div class="hero-name">Aparisi Law</div>
       <h1>
         <span class="en">[Slogan placeholder]</span>
         <span class="es">[Eslogan placeholder]</span>
@@ -629,7 +622,7 @@
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
-      <span>&copy; 2026 Aparisi & Associates LLC</span>
+      <span>&copy; 2026 Aparisi Law LLC</span>
       <div class="footer-links">
         <a href="practice-areas.html"><span class="en">Practice Areas</span><span class="es">Áreas</span></a>
         <a href="about.html"><span class="en">About</span><span class="es">Nosotros</span></a>
@@ -642,7 +635,7 @@
     function setLang(lang) {
       document.documentElement.lang = lang;
       document.querySelectorAll('.lang-toggle button').forEach(btn => {
-        btn.classList.toggle('active', (lang === 'en' && btn.textContent.trim() === 'English') || (lang === 'es' && btn.textContent.trim() === 'Español'));
+        btn.classList.toggle('active', (lang === 'en' && btn.textContent.trim() === 'EN') || (lang === 'es' && btn.textContent.trim() === 'ES'));
       });
     }
   </script>
