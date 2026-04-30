@@ -41,14 +41,13 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      background: rgba(26, 37, 53, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: transparent;
+      border-bottom: none;
     }
     .nav-inner {
-      max-width: 1100px;
+      max-width: 1800px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -62,10 +61,10 @@
     }
     .nav-logo em { font-style: normal; color: rgba(255,255,255,0.5); }
     .logo-mark { margin-right: 8px; vertical-align: -4px; }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links { display: flex; gap: 48px; list-style: none; }
     .nav-links a {
-      color: rgba(255,255,255,0.6);
-      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-size: 22px;
       font-weight: 400;
       transition: color 0.15s;
     }
@@ -77,16 +76,16 @@
       gap: 20px;
     }
     .nav-phone {
-      color: rgba(255,255,255,0.6);
-      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-size: 22px;
     }
     .nav-phone:hover { color: #fff; }
     .nav-cta {
       background: var(--accent);
       color: #fff;
-      font-size: 13px;
+      font-size: 20px;
       font-weight: 500;
-      padding: 10px 22px;
+      padding: 18px 38px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -593,12 +592,14 @@
       padding: 0 80px;
     }
     .attorneys-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 40px;
     }
     .attorney-card {
-      text-align: center;
+      width: calc(33.333% - 28px);
+      min-width: 240px;
     }
     .attorney-photo {
       width: 100%;
@@ -637,15 +638,14 @@
     }
 
     @media (max-width: 900px) {
-      .attorneys-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .attorney-card {
+        width: calc(50% - 20px);
       }
     }
     @media (max-width: 768px) {
-      .attorneys-grid {
-        grid-template-columns: 1fr;
-        max-width: 360px;
-        margin: 0 auto;
+      .attorney-card {
+        width: 100%;
+        max-width: 320px;
       }
       .firm-intro-inner,
       .attorneys-inner {
