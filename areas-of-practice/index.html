@@ -93,22 +93,23 @@
     }
     .practice-card-tag {
       font-family: var(--serif);
-      font-size: 15px;
-      font-style: italic;
+      font-size: clamp(24px, 2vw, 30px);
       font-weight: 400;
-      letter-spacing: 0;
+      letter-spacing: -0.3px;
       text-transform: none;
-      color: var(--accent);
-      margin-bottom: 10px;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 6px;
       transition: color 0.3s;
     }
     .practice-card-title {
       font-family: var(--sans);
-      font-size: 22px;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-      color: var(--text);
-      line-height: 1.25;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      line-height: 1.4;
       transition: color 0.3s;
     }
     .practice-card-title-alt {
