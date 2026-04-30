@@ -592,22 +592,19 @@
       margin: 0 auto;
       padding: 0 80px;
     }
-    .attorney-card {
+    .attorneys-grid {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 48px;
-      align-items: start;
-      padding: 48px 0;
-      border-bottom: 1px solid var(--rule);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
     }
-    .attorney-card:first-child {
-      border-top: 1px solid var(--rule);
+    .attorney-card {
+      text-align: center;
     }
     .attorney-photo {
       width: 100%;
-      aspect-ratio: 3/4;
+      aspect-ratio: 1/1;
       background: linear-gradient(145deg, #e8e4de, #d5cfc6);
-      border-radius: 4px;
+      border-radius: 50%;
       object-fit: cover;
       object-position: top;
       display: flex;
@@ -616,33 +613,39 @@
       color: var(--text-light);
       font-size: 13px;
       font-family: var(--sans);
+      margin-bottom: 20px;
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .attorney-info h2 {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 400;
       color: var(--text);
       margin-bottom: 4px;
     }
     .attorney-title {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--accent);
       font-weight: 500;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .attorney-bio {
-      font-size: 16px;
+      font-size: 14px;
       color: var(--text-mid);
-      line-height: 1.75;
-      max-width: 640px;
+      line-height: 1.7;
     }
 
-    @media (max-width: 768px) {
-      .attorney-card {
-        grid-template-columns: 1fr;
-        gap: 24px;
+    @media (max-width: 900px) {
+      .attorneys-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-      .attorney-photo {
-        max-width: 200px;
+    }
+    @media (max-width: 768px) {
+      .attorneys-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        margin: 0 auto;
       }
       .firm-intro-inner,
       .attorneys-inner {
@@ -707,6 +710,7 @@
   <!-- Attorney Profiles -->
   <section class="attorneys-section">
     <div class="attorneys-inner">
+      <div class="attorneys-grid">
 
       <!-- Jaime -->
       <div class="attorney-card">
@@ -788,6 +792,7 @@
         </div>
       </div>
 
+      </div>
     </div>
   </section>
 
