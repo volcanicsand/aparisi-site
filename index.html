@@ -71,18 +71,24 @@
     }
     .hero-bg {
       position: absolute;
-      inset: 0;
-      background: url('hero.jpg') center 15%/cover no-repeat;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 320px;
+      background: url('hero.jpg') center 30%/cover no-repeat;
       background-color: #1a2535;
     }
     .hero-overlay {
       position: absolute;
-      inset: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 320px;
       background: linear-gradient(
         to bottom,
         rgba(10, 18, 28, 0.5) 0%,
-        rgba(10, 18, 28, 0.4) 50%,
-        rgba(10, 18, 28, 0.55) 100%
+        rgba(10, 18, 28, 0.25) 30%,
+        rgba(10, 18, 28, 0.35) 100%
       );
     }
     .hero-content { text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
