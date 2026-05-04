@@ -70,56 +70,17 @@
       flex-grow: 1;
       min-height: 70vh;
     }
-    .hero-bg {
-      display: none;
-    }
     .hero-bg-left,
     .hero-bg-right {
       position: absolute;
       top: 0;
       bottom: 0;
-      width: 30%;
-      background-image: url('hero.jpg');
-      background-size: 333% auto;
-      background-color: #1a2535;
-    }
-    .hero-bg-left {
       left: 0;
-      background-position: 0% 15%;
+      right: 0;
+      pointer-events: none;
     }
     .hero-bg-right {
-      right: 0;
-      background-position: 100% 15%;
-    }
-    .hero-bg-left::after,
-    .hero-bg-right::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(10, 18, 28, 0.45);
-    }
-    .hero-bg-left::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      width: 80px;
-      background: linear-gradient(to left, var(--navy), transparent);
-      z-index: 1;
-    }
-    .hero-bg-right::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 80px;
-      background: linear-gradient(to right, var(--navy), transparent);
-      z-index: 1;
-    }
-    .hero-overlay {
-      display: none;
+      background: url('hero.jpg') right 48px center/auto 70% no-repeat;
     }
     .hero-content { text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
     .hero-content {
@@ -283,10 +244,8 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg"></div>
     <div class="hero-bg-left"></div>
     <div class="hero-bg-right"></div>
-    <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span class="en">Maryland <em class="hero-eyebrow-key">Immigration</em> Attorneys</span>
