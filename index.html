@@ -80,7 +80,9 @@
       pointer-events: none;
     }
     .hero-bg-left {
-      background: url('mural-left.webp') left 32px top 6%/auto 56% no-repeat;
+      background:
+        url('mural-left-far.webp') left 32px center/auto 56% no-repeat,
+        url('mural-left-near.webp') left 200px top 1%/auto 48% no-repeat;
     }
     .hero-bg-right {
       background:
@@ -208,8 +210,10 @@
     .about-role { font-size: 14px; color: var(--accent); font-weight: 500; margin-bottom: 20px; }
     .about-text p { font-size: 16px; color: var(--text-mid); margin-bottom: 16px; line-height: 1.75; }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
       .hero-bg-left, .hero-bg-right { display: none; }
+    }
+    @media (max-width: 768px) {
       .hero-content { padding: 60px 24px; }
       .hero-actions { gap: 16px; }
       .hero-scripture { padding: 20px 24px 0; }
