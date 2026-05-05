@@ -66,7 +66,7 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      background: var(--navy);
+      background: var(--cream);
       flex-grow: 1;
       min-height: 70vh;
     }
@@ -89,7 +89,6 @@
         url('hero-fig2.webp') right 260px top 6%/auto 36% no-repeat,
         url('hero-fig3.webp') right 32px bottom 10%/auto 36% no-repeat;
     }
-    .hero-content { text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
     .hero-content {
       position: relative;
       z-index: 1;
@@ -118,25 +117,33 @@
       font-family: var(--serif);
       font-size: clamp(60px, 11vw, 140px);
       font-weight: 400;
-      color: #fff;
+      color: var(--navy);
       letter-spacing: 8px;
       margin-bottom: 24px;
     }
     .hero h1 {
       font-size: clamp(42px, 7vw, 76px);
       font-weight: 400;
-      color: #fff;
+      color: var(--accent);
       margin-bottom: 24px;
       letter-spacing: -0.5px;
     }
     .hero-sub {
       font-size: 22px;
       font-weight: 400;
-      color: rgba(255,255,255,0.88);
+      color: var(--text-mid);
       max-width: 680px;
       margin: 0 auto 40px;
       line-height: 1.7;
       letter-spacing: 0.2px;
+    }
+    .hero .btn-ghost {
+      color: var(--navy);
+      border-color: rgba(26,37,53,0.25);
+    }
+    .hero .btn-ghost:hover {
+      border-color: rgba(26,37,53,0.55);
+      color: var(--navy);
     }
     .hero-actions {
       display: flex;
@@ -263,14 +270,10 @@
     <div class="hero-bg-left"></div>
     <div class="hero-bg-right"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="en">Maryland <em class="hero-eyebrow-key">Immigration</em> Attorneys</span>
-        <span class="es">Abogados de <em class="hero-eyebrow-key">Inmigración</em> en Maryland</span>
-      </div>
       <div class="hero-name">Aparisi Law</div>
       <h1>
-        <span class="en">Experienced. Devoted. Compassionate.</span>
-        <span class="es">Experimentados. Dedicados. Compasivos.</span>
+        <span class="en">Maryland Immigration Attorneys</span>
+        <span class="es">Abogados de Inmigración en Maryland</span>
       </h1>
       <p class="hero-sub">
         <span class="en">Over 30 years helping families navigate the American immigration system.</span>
@@ -285,10 +288,6 @@
           <span class="en">Call (301) 562-1416</span>
           <span class="es">Llame (301) 562-1416</span>
         </a>
-      </div>
-      <div class="hero-note">
-        <span class="en">Confidential &middot; Bilingual (EN/ES)</span>
-        <span class="es">Confidencial &middot; Bilingüe (EN/ES)</span>
       </div>
     </div>
   </section>
