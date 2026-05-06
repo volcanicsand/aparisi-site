@@ -71,37 +71,24 @@
       min-height: 70vh;
     }
 
-    /* Abstract hero — soft layered washes */
+    /* Hero background — clean gradient */
     .hero-art {
       position: absolute;
       inset: 0;
-      overflow: hidden;
-      background: linear-gradient(160deg, #1a3355 0%, #24506e 40%, #2a6e6a 70%, #1a3355 100%);
+      background: linear-gradient(145deg, #1a2e44 0%, #24506e 50%, #1a2e44 100%);
     }
 
     .hero-art::before {
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 80%, rgba(200, 140, 50, 0.35) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(42, 110, 106, 0.4) 0%, transparent 45%),
-        radial-gradient(ellipse at 50% 100%, rgba(220, 160, 60, 0.25) 0%, transparent 40%),
-        radial-gradient(ellipse at 70% 70%, rgba(180, 90, 50, 0.2) 0%, transparent 40%);
+      background: radial-gradient(ellipse at 50% 100%, rgba(58,124,165,0.25) 0%, transparent 60%);
     }
 
-    .hero-art::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 10% 30%, rgba(30, 80, 120, 0.4) 0%, transparent 50%),
-        radial-gradient(ellipse at 90% 80%, rgba(26, 51, 85, 0.5) 0%, transparent 45%);
-    }
-
+    .hero-art::after { display: none; }
     .hero-shape, .hero-band { display: none; }
 
-    .hero-content { text-shadow: 0 2px 12px rgba(10,20,40,0.5); }
+    .hero-content { text-shadow: 0 2px 12px rgba(10,20,40,0.4); }
     .hero-content {
       position: relative;
       z-index: 1;
