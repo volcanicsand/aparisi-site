@@ -204,7 +204,10 @@ nav {
   font-weight: 300;
   max-width: 620px;
   line-height: 1.75;
+  margin-left: auto;
+  margin-right: auto;
 }
+.page-header { text-align: center; }
 
 /* --- CTA Banner --- */
 .cta-banner, .cta-bar {
