@@ -3,12 +3,12 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --accent: #2a6e5a;
-  --accent-light: #e8f0ec;
-  --accent-hover: #225a49;
-  --navy: #1a2535;
-  --cream: #faf8f5;
-  --warm-bg: #fdfbf8;
+  --accent: #b8703a;
+  --accent-light: #f5ebe0;
+  --accent-hover: #9a5c2e;
+  --navy: #3a2218;
+  --cream: #faf6f1;
+  --warm-bg: #fdf9f4;
   --text: #1a1a1a;
   --text-mid: #4a4a4a;
   --text-light: #777;
@@ -170,7 +170,7 @@ nav {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(26,37,53,0.97) 0%, rgba(42,110,90,0.25) 100%);
+  background: linear-gradient(135deg, rgba(58,34,24,0.97) 0%, rgba(184,112,58,0.25) 100%);
 }
 .page-header-inner {
   position: relative;
