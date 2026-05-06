@@ -66,7 +66,7 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      background: #c44b3f;
+      background: #1e3a5f;
       flex-grow: 1;
       min-height: 70vh;
     }
@@ -80,23 +80,23 @@
         /* Bold sunburst rays from bottom center */
         conic-gradient(
           from 180deg at 50% 105%,
-          #d46a2e 0deg,
+          #1e3a5f 0deg,
           #e8a832 12deg,
-          #d46a2e 24deg,
-          #c44b3f 36deg,
-          #e8a832 48deg,
-          #d4843a 60deg,
-          #c44b3f 72deg,
+          #2a5a8c 24deg,
+          #1e3a5f 36deg,
+          #d4843a 48deg,
+          #2a5a8c 60deg,
+          #1e3a5f 72deg,
           #e8a832 82deg,
-          #d46a2e 92deg,
-          #c44b3f 104deg,
+          #2a5a8c 92deg,
+          #1e3a5f 104deg,
           #d4843a 116deg,
           #e8a832 126deg,
-          #c44b3f 138deg,
-          #d46a2e 150deg,
-          #e8a832 162deg,
-          #c44b3f 174deg,
-          #d4843a 180deg
+          #1e3a5f 138deg,
+          #2a5a8c 150deg,
+          #d4843a 162deg,
+          #1e3a5f 174deg,
+          #2a5a8c 180deg
         );
     }
 
@@ -113,63 +113,63 @@
         ellipse at 50% 100%,
         #f0c050 0%,
         #e8a832 20%,
-        rgba(212, 106, 46, 0.6) 45%,
-        transparent 70%
+        rgba(212, 130, 46, 0.5) 40%,
+        transparent 65%
       );
     }
 
-    /* Overlay to soften rays and add depth */
+    /* Overlay — color washes for depth */
     .hero-art::after {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        /* Teal arc — top left */
-        radial-gradient(ellipse at 10% 0%, rgba(38, 140, 130, 0.55) 0%, transparent 50%),
-        /* Deep rose — top right */
-        radial-gradient(ellipse at 90% 10%, rgba(168, 50, 70, 0.45) 0%, transparent 45%),
+        /* Teal wash — top left */
+        radial-gradient(ellipse at 10% 0%, rgba(38, 140, 150, 0.5) 0%, transparent 50%),
+        /* Warm terracotta — top right */
+        radial-gradient(ellipse at 90% 10%, rgba(200, 100, 50, 0.4) 0%, transparent 45%),
         /* Golden bloom — center */
-        radial-gradient(ellipse at 50% 50%, rgba(232, 168, 50, 0.2) 0%, transparent 60%),
-        /* Earthy brown — bottom corners */
-        radial-gradient(ellipse at 5% 100%, rgba(90, 50, 30, 0.5) 0%, transparent 40%),
-        radial-gradient(ellipse at 95% 100%, rgba(90, 50, 30, 0.5) 0%, transparent 40%);
+        radial-gradient(ellipse at 50% 50%, rgba(232, 168, 50, 0.15) 0%, transparent 55%),
+        /* Deep blue — bottom corners */
+        radial-gradient(ellipse at 5% 100%, rgba(15, 30, 60, 0.5) 0%, transparent 40%),
+        radial-gradient(ellipse at 95% 100%, rgba(15, 30, 60, 0.5) 0%, transparent 40%);
     }
 
-    /* Floating mural shapes — bold color blocks */
+    /* Floating mural shapes */
     .hero-shape {
       position: absolute;
       border-radius: 50%;
     }
     .hero-shape-1 {
-      /* Large teal circle — top right */
+      /* Teal circle — top right */
       width: 500px; height: 500px;
       top: -15%; right: -8%;
       background: radial-gradient(circle at 40% 60%, #2a8c82, transparent 65%);
       opacity: 0.35;
     }
     .hero-shape-2 {
-      /* Warm pink — bottom left */
+      /* Warm coral — bottom left */
       width: 450px; height: 450px;
       bottom: -12%; left: -6%;
-      background: radial-gradient(circle at 60% 40%, #d45a6a, transparent 65%);
+      background: radial-gradient(circle at 60% 40%, #d47050, transparent 65%);
       opacity: 0.3;
     }
     .hero-shape-3 {
-      /* Small golden accent — upper left */
+      /* Golden accent — upper left */
       width: 250px; height: 250px;
       top: 8%; left: 12%;
       background: radial-gradient(circle, #f0c050, transparent 60%);
-      opacity: 0.25;
+      opacity: 0.2;
     }
     .hero-shape-4 {
-      /* Terracotta dot — center right */
+      /* Light blue dot — center right */
       width: 180px; height: 180px;
       top: 35%; right: 18%;
-      background: radial-gradient(circle, #d4743a, transparent 55%);
+      background: radial-gradient(circle, #4a90c4, transparent 55%);
       opacity: 0.2;
     }
 
-    /* Decorative arcs — like brushstrokes */
+    /* Decorative brushstroke bands */
     .hero-band {
       position: absolute;
       left: 0; right: 0;
@@ -189,7 +189,7 @@
     .hero-band-3 {
       bottom: 15%;
       height: 2px;
-      background: linear-gradient(90deg, transparent 20%, #d45a6a 40%, #d45a6a 60%, transparent 80%);
+      background: linear-gradient(90deg, transparent 20%, #d47050 40%, #d47050 60%, transparent 80%);
       opacity: 0.1;
     }
 
