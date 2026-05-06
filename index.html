@@ -66,120 +66,134 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      background: #4a2a1a;
+      background: #c44b3f;
       flex-grow: 1;
       min-height: 70vh;
     }
 
-    /* Abstract mural art — layered CSS shapes */
+    /* Abstract mural art — vivid Latin American palette */
     .hero-art {
       position: absolute;
       inset: 0;
       overflow: hidden;
+      background:
+        /* Bold sunburst rays from bottom center */
+        conic-gradient(
+          from 180deg at 50% 105%,
+          #d46a2e 0deg,
+          #e8a832 12deg,
+          #d46a2e 24deg,
+          #c44b3f 36deg,
+          #e8a832 48deg,
+          #d4843a 60deg,
+          #c44b3f 72deg,
+          #e8a832 82deg,
+          #d46a2e 92deg,
+          #c44b3f 104deg,
+          #d4843a 116deg,
+          #e8a832 126deg,
+          #c44b3f 138deg,
+          #d46a2e 150deg,
+          #e8a832 162deg,
+          #c44b3f 174deg,
+          #d4843a 180deg
+        );
     }
 
-    /* Warm radial sunburst from lower-center */
+    /* Golden-amber glow at the sunburst origin */
     .hero-art::before {
       content: '';
       position: absolute;
-      bottom: -30%;
+      bottom: -20%;
       left: 50%;
       transform: translateX(-50%);
-      width: 140%;
-      height: 120%;
+      width: 100%;
+      height: 80%;
       background: radial-gradient(
         ellipse at 50% 100%,
-        #d4943c 0%,
-        #c47a2e 15%,
-        #a85a28 30%,
-        #6b3420 55%,
-        transparent 75%
+        #f0c050 0%,
+        #e8a832 20%,
+        rgba(212, 106, 46, 0.6) 45%,
+        transparent 70%
       );
-      opacity: 0.85;
     }
 
-    /* Conic rays emanating from bottom center */
+    /* Overlay to soften rays and add depth */
     .hero-art::after {
       content: '';
       position: absolute;
-      bottom: -60%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200%;
-      height: 200%;
-      background: conic-gradient(
-        from 180deg at 50% 100%,
-        transparent 0deg,
-        rgba(218, 165, 90, 0.12) 8deg,
-        transparent 16deg,
-        transparent 24deg,
-        rgba(218, 165, 90, 0.10) 32deg,
-        transparent 40deg,
-        transparent 52deg,
-        rgba(200, 140, 70, 0.08) 58deg,
-        transparent 64deg,
-        transparent 76deg,
-        rgba(218, 165, 90, 0.12) 82deg,
-        transparent 88deg,
-        transparent 100deg,
-        rgba(200, 140, 70, 0.10) 106deg,
-        transparent 112deg,
-        transparent 124deg,
-        rgba(218, 165, 90, 0.08) 130deg,
-        transparent 136deg,
-        transparent 148deg,
-        rgba(200, 140, 70, 0.12) 154deg,
-        transparent 160deg,
-        transparent 168deg,
-        rgba(218, 165, 90, 0.10) 174deg,
-        transparent 180deg
-      );
-      opacity: 1;
+      inset: 0;
+      background:
+        /* Teal arc — top left */
+        radial-gradient(ellipse at 10% 0%, rgba(38, 140, 130, 0.55) 0%, transparent 50%),
+        /* Deep rose — top right */
+        radial-gradient(ellipse at 90% 10%, rgba(168, 50, 70, 0.45) 0%, transparent 45%),
+        /* Golden bloom — center */
+        radial-gradient(ellipse at 50% 50%, rgba(232, 168, 50, 0.2) 0%, transparent 60%),
+        /* Earthy brown — bottom corners */
+        radial-gradient(ellipse at 5% 100%, rgba(90, 50, 30, 0.5) 0%, transparent 40%),
+        radial-gradient(ellipse at 95% 100%, rgba(90, 50, 30, 0.5) 0%, transparent 40%);
     }
 
-    /* Floating abstract shapes — warm terracotta arcs */
+    /* Floating mural shapes — bold color blocks */
     .hero-shape {
       position: absolute;
       border-radius: 50%;
-      opacity: 0.15;
     }
     .hero-shape-1 {
-      width: 600px; height: 600px;
-      top: -200px; right: -100px;
-      background: radial-gradient(circle at 30% 70%, #d4844a, transparent 70%);
-      opacity: 0.2;
+      /* Large teal circle — top right */
+      width: 500px; height: 500px;
+      top: -15%; right: -8%;
+      background: radial-gradient(circle at 40% 60%, #2a8c82, transparent 65%);
+      opacity: 0.35;
     }
     .hero-shape-2 {
-      width: 400px; height: 400px;
-      bottom: -100px; left: -80px;
-      background: radial-gradient(circle at 70% 30%, #c46a3a, transparent 70%);
-      opacity: 0.18;
+      /* Warm pink — bottom left */
+      width: 450px; height: 450px;
+      bottom: -12%; left: -6%;
+      background: radial-gradient(circle at 60% 40%, #d45a6a, transparent 65%);
+      opacity: 0.3;
     }
     .hero-shape-3 {
-      width: 300px; height: 300px;
-      top: 10%; left: 15%;
-      background: radial-gradient(circle, #daa05a, transparent 65%);
-      opacity: 0.08;
+      /* Small golden accent — upper left */
+      width: 250px; height: 250px;
+      top: 8%; left: 12%;
+      background: radial-gradient(circle, #f0c050, transparent 60%);
+      opacity: 0.25;
     }
     .hero-shape-4 {
-      width: 200px; height: 200px;
-      top: 30%; right: 20%;
-      background: radial-gradient(circle, #e8b87a, transparent 60%);
-      opacity: 0.06;
+      /* Terracotta dot — center right */
+      width: 180px; height: 180px;
+      top: 35%; right: 18%;
+      background: radial-gradient(circle, #d4743a, transparent 55%);
+      opacity: 0.2;
     }
 
-    /* Horizontal bands — like abstracted landscape layers */
+    /* Decorative arcs — like brushstrokes */
     .hero-band {
       position: absolute;
       left: 0; right: 0;
-      height: 2px;
-      opacity: 0.08;
+      opacity: 0.15;
     }
-    .hero-band-1 { bottom: 28%; background: linear-gradient(90deg, transparent 5%, #daa05a 30%, #daa05a 70%, transparent 95%); }
-    .hero-band-2 { bottom: 22%; background: linear-gradient(90deg, transparent 15%, #c4784a 40%, #c4784a 60%, transparent 85%); opacity: 0.06; }
-    .hero-band-3 { bottom: 16%; background: linear-gradient(90deg, transparent 25%, #b8683a 45%, #b8683a 55%, transparent 75%); opacity: 0.05; }
+    .hero-band-1 {
+      bottom: 20%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #f0c050 20%, #e8a832 50%, #f0c050 80%, transparent);
+    }
+    .hero-band-2 {
+      bottom: 18%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 10%, #2a8c82 30%, #2a8c82 70%, transparent 90%);
+      opacity: 0.12;
+    }
+    .hero-band-3 {
+      bottom: 15%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 20%, #d45a6a 40%, #d45a6a 60%, transparent 80%);
+      opacity: 0.1;
+    }
 
-    .hero-content { text-shadow: 0 2px 16px rgba(30,15,5,0.6); }
+    .hero-content { text-shadow: 0 2px 16px rgba(30,10,5,0.55), 0 0 40px rgba(30,10,5,0.3); }
     .hero-content {
       position: relative;
       z-index: 1;
@@ -301,8 +315,8 @@
     .about-text p { font-size: 16px; color: var(--text-mid); margin-bottom: 16px; line-height: 1.75; }
 
     @media (max-width: 768px) {
-      .hero-shape-1 { width: 300px; height: 300px; top: -100px; right: -60px; }
-      .hero-shape-2 { width: 200px; height: 200px; }
+      .hero-shape-1 { width: 250px; height: 250px; top: -80px; right: -40px; }
+      .hero-shape-2 { width: 220px; height: 220px; }
       .hero-content { padding: 60px 24px; }
       .hero-actions { gap: 16px; }
       .hero-scripture { padding: 20px 24px 0; }
