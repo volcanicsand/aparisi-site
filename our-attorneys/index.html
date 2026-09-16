@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Aparisi Law</title>
-  <meta name="description" content="Learn about Jaime Winthuysen Aparisi, founder of Aparisi Law — over 30 years of immigration law experience serving the Washington, D.C. area.">
+  <meta name="description" content="Meet the four attorneys of Aparisi Law, an immigration law firm in Silver Spring, Maryland with over 30 years of experience serving the Washington, D.C. area.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
@@ -61,68 +61,96 @@
     /* --- Attorney Profiles --- */
     .attorneys-section {
       background: var(--warm-bg);
-      padding: 80px 0 100px;
+      padding: 72px 0 96px;
     }
     .attorneys-inner {
-      max-width: 1800px;
+      max-width: 1360px;
       margin: 0 auto;
-      padding: 0 80px;
+      padding: 0 40px;
+    }
+    .attorneys-intro {
+      max-width: 720px;
+      margin: 0 auto 56px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--text-mid);
     }
     .attorneys-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px;
     }
     .attorney-card {
-      width: calc(33.333% - 28px);
-      min-width: 240px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 28px;
+      align-items: start;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 28px;
+      box-shadow: 0 8px 28px rgba(26,46,68,0.05);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .attorney-card:hover {
+      box-shadow: 0 16px 40px rgba(26,46,68,0.10);
+      transform: translateY(-2px);
     }
     .attorney-photo {
-      width: 100%;
-      aspect-ratio: 1/1;
-      background: linear-gradient(145deg, #e8e4de, #d5cfc6);
+      width: 200px;
+      aspect-ratio: 4/5;
       border-radius: 8px;
       object-fit: cover;
       object-position: top;
+      display: block;
+      background: linear-gradient(160deg, var(--accent-light), #d9e6ee);
+    }
+    .attorney-photo-placeholder {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--text-light);
-      font-size: 13px;
-      font-family: var(--sans);
-      margin: 0 auto 20px;
-      max-width: 220px;
-    }
-    .attorney-info {
-      max-width: 220px;
-      margin: 0 auto;
-      text-align: center;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 44px;
+      letter-spacing: 1px;
     }
     .attorney-info h2 {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 400;
       color: var(--text);
       margin-bottom: 4px;
+      line-height: 1.2;
     }
     .attorney-title {
-      font-size: 13px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       color: var(--accent);
-      font-weight: 500;
-      margin-bottom: 12px;
+      font-weight: 600;
+      margin-bottom: 14px;
     }
     .attorney-bio {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-mid);
-      line-height: 1.7;
+      line-height: 1.75;
+    }
+    .attorney-meta {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--rule);
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.6;
     }
 
-    @media (max-width: 900px) {
-      .attorney-card { width: calc(50% - 20px); }
+    @media (max-width: 1024px) {
+      .attorneys-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 768px) {
-      .attorney-card { width: 100%; max-width: 320px; }
-      .attorneys-inner { padding: 0 24px; }
+    @media (max-width: 600px) {
+      .attorneys-inner { padding: 0 20px; }
+      .attorney-card { grid-template-columns: 1fr; padding: 22px; }
+      .attorney-photo { width: 160px; }
     }
   </style>
 </head>
@@ -172,10 +200,14 @@
   <!-- Attorney Profiles -->
   <section class="attorneys-section">
     <div class="attorneys-inner">
+      <p class="attorneys-intro">
+        <span class="en">Four attorneys, one team. Every case at Aparisi Law is handled by a lawyer who appears in immigration court and before USCIS every week, and who will know your file by name.</span>
+        <span class="es">Cuatro abogados, un solo equipo. Cada caso en Aparisi Law está a cargo de un abogado que comparece cada semana ante la corte de inmigración y USCIS, y que conocerá su expediente por nombre.</span>
+      </p>
       <div class="attorneys-grid">
 
       <!-- Jaime -->
-      <div class="attorney-card">
+      <article class="attorney-card">
         <img class="attorney-photo" src="../jaime.jpg" alt="Jaime Winthuysen Aparisi">
         <div class="attorney-info">
           <h2>Jaime Winthuysen Aparisi</h2>
@@ -184,75 +216,75 @@
             <span class="es">Fundador y Abogado Principal</span>
           </div>
           <p class="attorney-bio">
-            <span class="en">An immigrant in a nation of immigrants, Jaime Winthuysen Aparisi was born in São Paulo, Brazil to parents from Madrid and Valencia, Spain, and raised in Washington, D.C. Growing up in a multilingual household sensitized him to the legal and cultural plight of immigrants.</span>
-            <span class="es">Inmigrante en una nación de inmigrantes, Jaime Winthuysen Aparisi nació en São Paulo, Brasil, de padres de Madrid y Valencia, España, y creció en Washington, D.C. Crecer en un hogar multilingüe lo sensibilizó hacia la situación legal y cultural de los inmigrantes.</span>
+            <span class="en">An immigrant in a nation of immigrants, Jaime Winthuysen Aparisi was born in São Paulo, Brazil to parents from Madrid and Valencia, Spain, and raised in Washington, D.C. Growing up in a multilingual household sensitized him to the legal and cultural plight of immigrants. He has practiced immigration law for more than 30 years and founded Aparisi Law to serve the immigrant communities of Maryland, Virginia, and the District.</span>
+            <span class="es">Inmigrante en una nación de inmigrantes, Jaime Winthuysen Aparisi nació en São Paulo, Brasil, de padres de Madrid y Valencia, España, y creció en Washington, D.C. Crecer en un hogar multilingüe lo sensibilizó hacia la situación legal y cultural de los inmigrantes. Ejerce el derecho migratorio desde hace más de 30 años y fundó Aparisi Law para servir a las comunidades inmigrantes de Maryland, Virginia y el Distrito.</span>
           </p>
+          <div class="attorney-meta">
+            <span class="en">English, Spanish, Portuguese</span>
+            <span class="es">Inglés, español, portugués</span>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Sylvie -->
-      <div class="attorney-card">
-        <img class="attorney-photo" src="../sylvie.jpg" alt="Sylviane Elessie">
+      <!-- John -->
+      <article class="attorney-card">
+        <div class="attorney-photo attorney-photo-placeholder" aria-label="John Hare">JH</div>
         <div class="attorney-info">
-          <h2>Sylviane Elessie</h2>
+          <h2>John Hare</h2>
           <div class="attorney-title">
-            <span class="en">[Title]</span>
-            <span class="es">[Título]</span>
+            <span class="en">Attorney</span>
+            <span class="es">Abogado</span>
           </div>
           <p class="attorney-bio">
-            <span class="en">Sylviane Elessie's dedication to immigration law is rooted in her own experience as an immigrant. She began her career on the administrative staff at the Embassy of Cameroon, supporting the consulate department, and discovered her calling when she went on to counsel fellow immigrants at a family law firm. She began practicing immigration law in 2017 and has been serving the immigrant community ever since. Sylviane is fluent in French, English, and Spanish.</span>
-            <span class="es">La dedicación de Sylviane Elessie al derecho migratorio se basa en su propia experiencia como inmigrante. Comenzó su carrera en el personal administrativo de la Embajada de Camerún, apoyando al departamento consular, y descubrió su vocación cuando pasó a asesorar a otros inmigrantes en una firma de derecho familiar. Comenzó a ejercer derecho migratorio en 2017 y desde entonces ha servido a la comunidad inmigrante. Sylviane habla con fluidez francés, inglés y español.</span>
+            <span class="en">John Hare represents clients in removal proceedings before the Baltimore, Hyattsville, and Sterling immigration courts in asylum, withholding, Convention Against Torture, and cancellation cases, and briefs appeals to the Board of Immigration Appeals. In 2026 his federal suit in the District of Maryland reversed the withdrawal of a client's Temporary Protected Status and secured her release from detention. Before joining Aparisi Law he spent fifteen years in investigations and compliance practice at WilmerHale, Paul Hastings, BAE Systems, and Microsoft. He is a graduate of Columbia Law School and Williams College.</span>
+            <span class="es">John Hare representa a clientes en procesos de deportación ante las cortes de inmigración de Baltimore, Hyattsville y Sterling en casos de asilo, retención de expulsión, Convención contra la Tortura y cancelación de deportación, y redacta apelaciones ante la Junta de Apelaciones de Inmigración. En 2026 su demanda federal en el Distrito de Maryland revirtió el retiro del Estatus de Protección Temporal de una clienta y logró su liberación. Antes de unirse a Aparisi Law, ejerció durante quince años en investigaciones y cumplimiento normativo en WilmerHale, Paul Hastings, BAE Systems y Microsoft. Es graduado de la Facultad de Derecho de Columbia y de Williams College.</span>
           </p>
-        </div>
-      </div>
-
-      <!-- Hannah -->
-      <div class="attorney-card">
-        <img class="attorney-photo" src="../hannah.jpg" alt="Hannah Bossert">
-        <div class="attorney-info">
-          <h2>Hannah Bossert</h2>
-          <div class="attorney-title">
-            <span class="en">[Title]</span>
-            <span class="es">[Título]</span>
+          <div class="attorney-meta">
+            <span class="en">English, Spanish &middot; Admitted in Washington, D.C.</span>
+            <span class="es">Inglés, español &middot; Admitido en Washington, D.C.</span>
           </div>
-          <p class="attorney-bio">
-            <span class="en">[Bio placeholder]</span>
-            <span class="es">[Bio placeholder]</span>
-          </p>
         </div>
-      </div>
+      </article>
 
       <!-- Felipe -->
-      <div class="attorney-card">
+      <article class="attorney-card">
         <img class="attorney-photo" src="../felipe.jpg" alt="Felipe Fernández León">
         <div class="attorney-info">
           <h2>Felipe Fernández León</h2>
           <div class="attorney-title">
-            <span class="en">[Title]</span>
-            <span class="es">[Título]</span>
+            <span class="en">Attorney</span>
+            <span class="es">Abogado</span>
           </div>
           <p class="attorney-bio">
             <span class="en">[Bio placeholder]</span>
             <span class="es">[Bio placeholder]</span>
           </p>
+          <div class="attorney-meta">
+            <span class="en">English, Spanish</span>
+            <span class="es">Inglés, español</span>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <!-- John -->
-      <div class="attorney-card">
-        <div class="attorney-photo">[Photo]</div>
+      <!-- Josh -->
+      <article class="attorney-card">
+        <div class="attorney-photo attorney-photo-placeholder" aria-label="Joshua Nam">JN</div>
         <div class="attorney-info">
-          <h2>John Hare</h2>
+          <h2>Joshua Nam</h2>
           <div class="attorney-title">
-            <span class="en">[Title]</span>
-            <span class="es">[Título]</span>
+            <span class="en">Attorney</span>
+            <span class="es">Abogado</span>
           </div>
           <p class="attorney-bio">
             <span class="en">[Bio placeholder]</span>
             <span class="es">[Bio placeholder]</span>
           </p>
+          <div class="attorney-meta">
+            <span class="en">[Languages]</span>
+            <span class="es">[Idiomas]</span>
+          </div>
         </div>
-      </div>
+      </article>
 
       </div>
     </div>

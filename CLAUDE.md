@@ -27,7 +27,7 @@ A static HTML/CSS/JS marketing site for **Aparisi Law**, an immigration law firm
 /script.js                        (lang toggle + localStorage persistence)
 /about.html, /practice-areas.html, /contact.html, /how-it-works.html
                                   (meta-refresh + JS redirect stubs at old URLs)
-/jaime.jpg, /sylvie.jpg, /hannah.jpg, /felipe.jpg
+/jaime.jpg, /felipe.jpg
                                   (attorney photos)
 /hero.jpg, /america.jpg           (decorative imagery, copyright-questionable;
                                   flag for replacement before live launch)
@@ -78,7 +78,7 @@ Same pattern on the steps cards (with a small decorative number kept).
 ## Known placeholders the user explicitly chose to leave alone
 
 - Homepage `<h1>` is `[Slogan placeholder]` — until the user has a real slogan, leave it.
-- Attorney bios: Jaime and Sylvie have real bios. **Hannah, Felipe, and John still have `[Bio placeholder]` and `[Title]`.** User has written some content for Sylvie that we cleaned up (dropped a Marquis Who's Who reference because it's a vanity publication; reframed "innate drive" → "dedication ... rooted in her own experience as an immigrant"). Wait for user to provide content for the others.
+- **Roster as of 9/16/26: four attorneys — Jaime, John Hare, Felipe Fernández León, Joshua Nam.** Sylviane and Hannah left the firm (removed from the page and repo 9/16/26). Jaime and John have bios (John's drafted from his resume, pending his review). **Felipe and Josh still have `[Bio placeholder]`; John and Josh have initials in place of a photo.** Card layout is a 2x2 grid of photo-left cards with a languages/admissions line under each bio.
 - Contact form posts to `action="#"` — no backend yet. Will need a service like Formspree or Netlify Forms before launch.
 
 ## Pending / what to do next
