@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Aparisi Law</title>
+  <title>Our Attorneys | Aparisi Law</title>
   <meta name="description" content="Learn about Jaime Winthuysen Aparisi, founder of Aparisi Law — over 30 years of immigration law experience serving the Washington, D.C. area.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
   <link rel="canonical" href="https://aparisi.com/our-attorneys/">
 
   <meta property="og:type" content="website">
@@ -57,6 +56,7 @@
     "description": "Immigration law firm in Silver Spring, Maryland — over 30 years of experience helping families navigate the U.S. immigration system."
   }
   </script>
+  <link rel="stylesheet" href="../styles.css">
   <style>
     /* --- Page Header (with America imagery) --- */
     .page-header::before {
@@ -137,15 +137,17 @@
       .attorneys-inner { padding: 0 24px; }
     }
   </style>
+  <link rel="stylesheet" href="../polish.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content"><span class="en">Skip to content</span><span class="es">Saltar al contenido</span></a>
   <!-- Nav -->
-  <nav>
+  <nav aria-label="Primary">
     <div class="nav-inner">
       <a href="../" class="nav-logo"><svg class="logo-mark" width="24" height="26" viewBox="0 0 56 60" fill="none"><polygon points="22,2 44,58 0,58" fill="rgba(255,255,255,0.3)"/><polygon points="34,2 56,58 12,58" fill="rgba(255,255,255,0.75)"/></svg>Aparisi Law</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="../our-attorneys/" class="active"><span class="en">About</span><span class="es">Nosotros</span></a></li>
+        <li><a href="../our-attorneys/" class="active" aria-current="page"><span class="en">About</span><span class="es">Nosotros</span></a></li>
         <li><a href="../areas-of-practice/"><span class="en">How We Help</span><span class="es">Cómo Ayudamos</span></a></li>
         <li><a href="../how-it-works/"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
         <li><a href="../contact/"><span class="en">Contact</span><span class="es">Contacto</span></a></li>
@@ -161,12 +163,13 @@
           <span class="es">Hablemos</span>
         </a>
       </div>
-      <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <button class="nav-hamburger" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main-content">
   <!-- Page Header -->
   <header class="page-header">
     <div class="page-header-inner">
@@ -175,8 +178,8 @@
         <span class="es">Nuestros Abogados</span>
       </h1>
       <p class="page-header-sub">
-        <span class="en">[Brief description of the team placeholder]</span>
-        <span class="es">[Breve descripción del equipo placeholder]</span>
+        <span class="en">Meet the people behind Aparisi Law.</span>
+        <span class="es">Conozca al equipo de Aparisi Law.</span>
       </p>
     </div>
   </header>
@@ -202,67 +205,29 @@
         </div>
       </div>
 
-      <!-- Sylvie -->
-      <div class="attorney-card">
-        <img class="attorney-photo" src="../sylvie.jpg" alt="Sylviane Elessie">
-        <div class="attorney-info">
-          <h2>Sylviane Elessie</h2>
-          <div class="attorney-title">
-            <span class="en">[Title]</span>
-            <span class="es">[Título]</span>
-          </div>
-          <p class="attorney-bio">
-            <span class="en">Sylviane Elessie's dedication to immigration law is rooted in her own experience as an immigrant. She began her career on the administrative staff at the Embassy of Cameroon, supporting the consulate department, and discovered her calling when she went on to counsel fellow immigrants at a family law firm. She began practicing immigration law in 2017 and has been serving the immigrant community ever since. Sylviane is fluent in French, English, and Spanish.</span>
-            <span class="es">La dedicación de Sylviane Elessie al derecho migratorio se basa en su propia experiencia como inmigrante. Comenzó su carrera en el personal administrativo de la Embajada de Camerún, apoyando al departamento consular, y descubrió su vocación cuando pasó a asesorar a otros inmigrantes en una firma de derecho familiar. Comenzó a ejercer derecho migratorio en 2017 y desde entonces ha servido a la comunidad inmigrante. Sylviane habla con fluidez francés, inglés y español.</span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Hannah -->
-      <div class="attorney-card">
-        <img class="attorney-photo" src="../hannah.jpg" alt="Hannah Bossert">
-        <div class="attorney-info">
-          <h2>Hannah Bossert</h2>
-          <div class="attorney-title">
-            <span class="en">[Title]</span>
-            <span class="es">[Título]</span>
-          </div>
-          <p class="attorney-bio">
-            <span class="en">[Bio placeholder]</span>
-            <span class="es">[Bio placeholder]</span>
-          </p>
-        </div>
-      </div>
-
       <!-- Felipe -->
       <div class="attorney-card">
         <img class="attorney-photo" src="../felipe.jpg" alt="Felipe Fernández León">
         <div class="attorney-info">
           <h2>Felipe Fernández León</h2>
           <div class="attorney-title">
-            <span class="en">[Title]</span>
-            <span class="es">[Título]</span>
+            <span class="en">Attorney</span>
+            <span class="es">Abogado</span>
           </div>
-          <p class="attorney-bio">
-            <span class="en">[Bio placeholder]</span>
-            <span class="es">[Bio placeholder]</span>
-          </p>
+
         </div>
       </div>
 
       <!-- John -->
       <div class="attorney-card">
-        <div class="attorney-photo">[Photo]</div>
+        <div class="attorney-photo attorney-monogram" aria-hidden="true">JH</div>
         <div class="attorney-info">
           <h2>John Hare</h2>
           <div class="attorney-title">
-            <span class="en">[Title]</span>
-            <span class="es">[Título]</span>
+            <span class="en">Attorney</span>
+            <span class="es">Abogado</span>
           </div>
-          <p class="attorney-bio">
-            <span class="en">[Bio placeholder]</span>
-            <span class="es">[Bio placeholder]</span>
-          </p>
+
         </div>
       </div>
 
@@ -270,6 +235,7 @@
     </div>
   </section>
 
+  </main>
   <!-- Footer -->
   <footer>
     <div class="footer-inner">

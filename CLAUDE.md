@@ -131,3 +131,9 @@ Most recent at top — `git log --oneline -20` will show the rest:
 ---
 
 *If anything here conflicts with what the user just said, the user wins. This file is a starting point, not the truth.*
+
+## Local refresh — October 19, 2026
+
+User confirmed the current attorney roster is Jaime Winthuysen Aparisi, Felipe Fernández León, and John Hare. Josh is no longer with the firm. Sylviane and Hannah are not on the current roster. The attorney page now reflects those three names. Retain Jaime's existing biography; no biographies or credentials were invented for Felipe or John. John uses an initials panel until an approved portrait is supplied.
+
+The isolated `polish/attorneys-and-responsive-design` branch preserves the cream typography-led homepage and existing copy. Shared finishing rules live in `polish.css`, loaded after page-specific styles. Practice/process descriptions are always visible, navigation collapses at tablet widths, and the menu exposes its state and supports Escape. The contact form still has no submission backend; do not treat it as operational. Browser visual review and remote comparison remain outstanding due to environment restrictions. Nothing was pushed or deployed.

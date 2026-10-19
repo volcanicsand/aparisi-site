@@ -7,7 +7,6 @@
   <meta name="description" content="Learn how Aparisi Law guides you through your immigration case — from the first call to final resolution.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
   <link rel="canonical" href="https://aparisi.com/how-it-works/">
 
   <meta property="og:type" content="website">
@@ -57,6 +56,7 @@
     "description": "Immigration law firm in Silver Spring, Maryland — over 30 years of experience helping families navigate the U.S. immigration system."
   }
   </script>
+  <link rel="stylesheet" href="../styles.css">
   <style>
     /* --- Centered page header --- */
     .page-header { text-align: center; }
@@ -144,17 +144,19 @@
       .step-card { min-height: 180px; }
     }
   </style>
+  <link rel="stylesheet" href="../polish.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content"><span class="en">Skip to content</span><span class="es">Saltar al contenido</span></a>
   <!-- Nav -->
-  <nav>
+  <nav aria-label="Primary">
     <div class="nav-inner">
       <a href="../" class="nav-logo"><svg class="logo-mark" width="24" height="26" viewBox="0 0 56 60" fill="none"><polygon points="22,2 44,58 0,58" fill="rgba(255,255,255,0.3)"/><polygon points="34,2 56,58 12,58" fill="rgba(255,255,255,0.75)"/></svg>Aparisi Law</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="../our-attorneys/"><span class="en">About</span><span class="es">Nosotros</span></a></li>
         <li><a href="../areas-of-practice/"><span class="en">How We Help</span><span class="es">Cómo Ayudamos</span></a></li>
-        <li><a href="../how-it-works/" class="active"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
+        <li><a href="../how-it-works/" class="active" aria-current="page"><span class="en">How It Works</span><span class="es">Cómo Funciona</span></a></li>
         <li><a href="../contact/"><span class="en">Contact</span><span class="es">Contacto</span></a></li>
       </ul>
       <div class="nav-right">
@@ -168,12 +170,13 @@
           <span class="es">Hablemos</span>
         </a>
       </div>
-      <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <button class="nav-hamburger" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main-content">
   <!-- Page Header -->
   <header class="page-header">
     <div class="page-header-inner">
@@ -273,6 +276,7 @@
     </div>
   </section>
 
+  </main>
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
