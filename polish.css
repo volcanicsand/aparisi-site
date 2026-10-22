@@ -1,0 +1,108 @@
+/* Consistent editorial layout and accessible controls. */
+main { flex: 1; }
+body:has(.hero) main { display: flex; flex-direction: column; }
+:focus-visible { outline: 3px solid #b88b44; outline-offset: 5px; }
+.skip-link { position: absolute; top: -100px; left: 16px; z-index: 2000; padding: 12px 20px; background: white; color: var(--navy); }
+.skip-link:focus { top: 12px; }
+.nav-inner { max-width: 1440px; padding: 0 40px; height: 88px; gap: 24px; }
+.nav-logo { flex-shrink: 0; white-space: nowrap; }
+.nav-links { gap: 28px; }
+.nav-links a, .nav-phone { font-size: 16px; white-space: nowrap; }
+.nav-links a { display: block; padding: 8px 0; }
+.nav-links a.active { box-shadow: 0 2px #bba881; }
+.nav-cta { font-size: 16px; padding: 12px 22px; white-space: nowrap; }
+.nav-right { gap: 16px; }
+.lang-toggle { border: 1px solid #536070; border-radius: 5px; padding: 2px; }
+.lang-toggle button { min-width: 36px; min-height: 40px; color: #bfc7ce; letter-spacing: .5px; }
+.lang-toggle button.active { background: #384658; border-radius: 3px; }
+.hero-content { max-width: 1250px; padding: 72px 40px 84px; }
+.hero-name { line-height: 1.12; }
+.hero h1 { font-size: clamp(28px, 3.5vw, 46px); max-width: 850px; margin: 0 auto 24px; }
+.hero-sub { font-size: 19px; max-width: 570px; margin-bottom: 32px; }
+.hero-actions { gap: 16px; margin-top: 32px; }
+.hero .btn { padding: 16px 28px; font-size: 16px; }
+.btn { font-size: 16px; }
+.page-header { padding: 64px 0; }
+.page-header-inner, .cta-banner-inner, .cta-bar-inner, .attorneys-inner, .contact-page-inner { max-width: 1280px; padding-left: 40px; padding-right: 40px; }
+.page-header-sub, .cta-banner-text p, .cta-bar-text p { color: #c4ced3; }
+.page-header .section-eyebrow, .page-header .page-eyebrow { color: #bfcfc7; }
+.footer-inner { max-width: 1280px; padding: 0 40px; color: #b7c0c7; }
+footer { border-top: 1px solid #394352; }
+.attorneys-section { padding: 64px 0 88px; }
+.practice-grid, .steps-grid { max-width: 1280px; padding: 0 40px; }
+.practice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.practice-card, .step-card { background: #fffefa; border: 1px solid var(--rule); border-radius: 4px; box-shadow: none; padding: 30px; min-height: 0; }
+.practice-card-desc, .step-card-desc { max-height: none; opacity: 1; overflow: visible; color: var(--text-mid); font-size: 16px; }
+.practice-card:hover, .step-card:hover { transform: none; background: #fffefa; border-color: #9aad9f; box-shadow: none; }
+.practice-card:hover .practice-card-tag, .step-card:hover .step-card-label { color: var(--text); }
+.practice-card:hover .practice-card-title, .step-card:hover .step-card-num { color: var(--accent); }
+.practice-card:hover .practice-card-desc, .step-card:hover .step-card-desc { max-height: none; }
+.step-card-num { opacity: 1; color: var(--accent); }
+.step-card:hover .step-card-num { opacity: 1; }
+.contact-page-inner { gap: 48px; }
+.contact-details-grid { grid-template-columns: 1fr; }
+.contact-detail strong { color: var(--text-mid); }
+.contact-detail a { text-decoration: underline; text-underline-offset: 4px; }
+.contact-form input, .contact-form select, .contact-form textarea { font-size: 16px; }
+@media (max-width: 1200px) {
+ .nav-phone { display: none; }
+ .nav-inner { padding: 0 28px; }
+ .nav-links { gap: 22px; }
+}
+@media (max-width: 1000px) {
+ .nav-inner { height: 80px; gap: 12px; }
+ .nav-right { margin-left: auto; }
+ .nav-links { display: none; }
+ .nav-hamburger { display: block; }
+ .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: var(--warm-bg); padding: 20px 28px; gap: 12px; border-bottom: 1px solid var(--rule); box-shadow: 0 12px 24px #1a25351a; }
+ .nav-links.open a { color: var(--navy); }
+ .nav-links a.active { box-shadow: none; text-decoration: underline; text-underline-offset: 6px; }
+ .practice-grid, .steps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+ .nav-inner { padding: 0 20px; }
+ .nav-logo { font-size: 23px; }
+ .nav-cta { display: none; }
+ .nav-right { gap: 8px; }
+ .hero-content { padding: 56px 24px 64px; }
+ .hero-name { font-size: clamp(44px, 10.5vw, 74px); letter-spacing: 3px; }
+ .hero h1 { font-size: 30px; }
+ .hero-sub { font-size: 17px; }
+ .hero-actions { flex-direction: column; }
+ .hero .btn { width: 100%; max-width: 340px; }
+ .page-header-inner, .attorneys-inner, .contact-page-inner, .footer-inner, .cta-banner-inner, .cta-bar-inner { padding-left: 24px; padding-right: 24px; }
+ .practice-grid, .steps-grid { padding: 0 24px; }
+ .practice-section, .steps-section { padding: 48px 0; }
+ .footer-inner { align-items: flex-start; flex-direction: column; }
+ .footer-links { flex-wrap: wrap; gap: 20px; }
+ .cta-banner-actions, .cta-bar-actions { flex-shrink: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+@media (max-width: 420px) {
+ .nav-logo { font-size: 21px; }
+ .nav-logo .logo-mark { display: none; }
+ .nav-inner { gap: 8px; }
+}
+
+/* Integrated with the current blue site and horizontal attorney cards. */
+.hero-eyebrow { color: #b9ccdc; }
+.attorneys-grid { grid-template-columns: 1fr; gap: 28px; }
+.attorney-card { grid-template-columns: 180px minmax(0, 1fr); gap: 32px; padding: 32px; }
+.attorney-photo { width: 180px; }
+.attorney-info h2 { font-size: 30px; }
+.attorney-bio { max-width: 850px; font-size: 16px; }
+.practice-card:hover .practice-card-title-alt { color: var(--text-mid); }
+.contact-review-note { padding: 20px; background: var(--accent-light); border-radius: 8px; }
+.contact-form fieldset { border: 0; padding: 0; margin: 16px 0 0; }
+.contact-form fieldset:disabled { opacity: .6; }
+@media (max-width: 700px) {
+ .attorneys-grid, .practice-grid, .steps-grid, .contact-page-inner { grid-template-columns: 1fr; }
+ .attorney-card { grid-template-columns: 1fr; padding: 24px; gap: 20px; }
+ .attorney-photo { width: 160px; }
+ .attorney-info h2 { font-size: 27px; }
+ .hero-eyebrow { letter-spacing: 2px; }
+}
+.contact-form fieldset { display: flex; flex-direction: column; gap: 16px; min-width: 0; }

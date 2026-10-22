@@ -131,3 +131,6 @@ Most recent at top — `git log --oneline -20` will show the rest:
 ---
 
 *If anything here conflicts with what the user just said, the user wins. This file is a starting point, not the truth.*
+
+## Integrated staging refresh — October 22, 2026
+The current version builds on master 3a59220, preserving the blue design and John's existing biography. Only Jaime, John and Felipe remain on the attorney roster. See REVIEW-NOTES.txt for validation and remaining production-launch items. The form is now disabled with a bilingual phone/email alternative until delivery is configured. Shared responsive/accessibility rules are in polish.css. This supersedes older cream-layout and four-attorney instructions above.

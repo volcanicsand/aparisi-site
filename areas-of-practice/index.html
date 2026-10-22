@@ -176,9 +176,11 @@
       text-transform: uppercase;
     }
   </style>
+  <link rel="stylesheet" href="../polish.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content"><span class="en">Skip to content</span><span class="es">Ir al contenido</span></a>
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
@@ -200,11 +202,12 @@
           <span class="es">Hablemos</span>
         </a>
       </div>
-      <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <button class="nav-hamburger" aria-controls="navLinks" aria-expanded="false" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+  <main id="main-content">
 
   <!-- Page Header -->
   <header class="page-header">
@@ -441,6 +444,7 @@
     </div>
   </section>
 
+  </main>
   <!-- Footer -->
   <footer>
     <div class="footer-inner">

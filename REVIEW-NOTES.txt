@@ -1,0 +1,13 @@
+Aparisi review update — October 22, 2026
+
+Integrated on top of master 3a59220, preserving its blue design and John's existing English/Spanish biography.
+Current attorney roster: Jaime Winthuysen Aparisi, John Hare, Felipe Fernández León. Josh removed; Felipe's visible biography placeholder removed without inventing copy.
+
+Responsive navigation, skip links, keyboard focus, accessible menu state and Escape/outside-click behavior added. Practice and process descriptions remain visible on touchscreens and desktop. Long attorney bios use full-width horizontal cards on desktop, stacking on mobile.
+
+The contact form still has no delivery service. Inputs and submission are disabled and a bilingual notice directs users to the existing phone/email. Connecting delivery remains a production-launch task.
+
+Validation: local link/asset checks, unique IDs, main landmarks, JSON-LD parsing, exact roster, John's biography unchanged, JavaScript syntax and git whitespace. Browser inspection at desktop, 820px tablet, and 390px mobile; Spanish persistence, mobile menu open/Escape, and disabled form submission verified.
+
+Staging URL: https://volcanicsand.github.io/aparisi-site/
+No change to aparisi.com hosting or DNS. This review does not independently verify existing biography/marketing claims or settle rights to legacy image assets. John's portrait and Felipe's biography remain content follow-ups.

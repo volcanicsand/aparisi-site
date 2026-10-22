@@ -148,9 +148,11 @@
       .form-row { flex-direction: column; }
     }
   </style>
+  <link rel="stylesheet" href="../polish.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content"><span class="en">Skip to content</span><span class="es">Ir al contenido</span></a>
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
@@ -172,11 +174,12 @@
           <span class="es">Hablemos</span>
         </a>
       </div>
-      <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <button class="nav-hamburger" aria-controls="navLinks" aria-expanded="false" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+  <main id="main-content">
 
   <!-- Page Header -->
   <header class="page-header">
@@ -228,18 +231,20 @@
 
       <!-- Right: Contact Form -->
       <div class="contact-form-col">
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" aria-describedby="contact-review-note">
+          <p class="contact-review-note" id="contact-review-note"><span class="en">Online messaging is not yet available. Please call <a href="tel:+13015621416">(301) 562-1416</a> or email <a href="mailto:info@aparisi.com">info@aparisi.com</a> to contact us.</span><span class="es">Los mensajes en línea aún no están disponibles. Llame al <a href="tel:+13015621416">(301) 562-1416</a> o escriba a <a href="mailto:info@aparisi.com">info@aparisi.com</a> para contactarnos.</span></p>
+          <fieldset disabled>
 
           <div class="form-row">
-            <input type="text" name="first_name" placeholder="First Name / Nombre" required>
-            <input type="text" name="last_name" placeholder="Last Name / Apellido" required>
+            <input type="text" name="first_name" aria-label="First name / Nombre" placeholder="First Name / Nombre" required>
+            <input type="text" name="last_name" aria-label="Last name / Apellido" placeholder="Last Name / Apellido" required>
           </div>
 
-          <input type="email" name="email" placeholder="Email / Correo electrónico" required>
+          <input type="email" name="email" aria-label="Email / Correo electrónico" placeholder="Email / Correo electrónico" required>
 
-          <input type="tel" name="phone" placeholder="Phone / Teléfono">
+          <input type="tel" name="phone" aria-label="Phone / Teléfono" placeholder="Phone / Teléfono">
 
-          <select name="practice_area">
+          <select name="practice_area" aria-label="Practice area / Área de práctica">
             <option value="">Practice Area / Área de Práctica</option>
             <option value="family">Family-Based Immigration / Inmigración Familiar</option>
             <option value="removal">Removal Defense / Defensa contra la Deportación</option>
@@ -251,7 +256,7 @@
             <option value="other">Other / Otro</option>
           </select>
 
-          <textarea name="message" placeholder="Tell us about your situation / Cuéntenos sobre su situación"></textarea>
+          <textarea name="message" aria-label="Message / Mensaje" placeholder="Tell us about your situation / Cuéntenos sobre su situación"></textarea>
 
           <div class="form-submit">
             <button type="submit" class="btn btn-accent">
@@ -260,12 +265,14 @@
             </button>
           </div>
 
+        </fieldset>
         </form>
       </div>
 
     </div>
   </section>
 
+  </main>
   <!-- Footer -->
   <footer>
     <div class="footer-inner">

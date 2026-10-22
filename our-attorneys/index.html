@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Aparisi Law</title>
-  <meta name="description" content="Meet the four attorneys of Aparisi Law, an immigration law firm in Silver Spring, Maryland with over 30 years of experience serving the Washington, D.C. area.">
+  <meta name="description" content="Meet the three attorneys of Aparisi Law, an immigration law firm in Silver Spring, Maryland with over 30 years of experience serving the Washington, D.C. area.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
@@ -153,9 +153,11 @@
       .attorney-photo { width: 160px; }
     }
   </style>
+  <link rel="stylesheet" href="../polish.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content"><span class="en">Skip to content</span><span class="es">Ir al contenido</span></a>
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
@@ -177,11 +179,12 @@
           <span class="es">Hablemos</span>
         </a>
       </div>
-      <button class="nav-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <button class="nav-hamburger" aria-controls="navLinks" aria-expanded="false" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
+  <main id="main-content">
 
   <!-- Page Header -->
   <header class="page-header">
@@ -201,8 +204,8 @@
   <section class="attorneys-section">
     <div class="attorneys-inner">
       <p class="attorneys-intro">
-        <span class="en">Four attorneys, one team. Every case at Aparisi Law is handled by a lawyer who appears in immigration court and before USCIS every week, and who will know your file by name.</span>
-        <span class="es">Cuatro abogados, un solo equipo. Cada caso en Aparisi Law está a cargo de un abogado que comparece cada semana ante la corte de inmigración y USCIS, y que conocerá su expediente por nombre.</span>
+        <span class="en">Three attorneys, one team. Every case at Aparisi Law is handled by a lawyer who appears in immigration court and before USCIS every week, and who will know your file by name.</span>
+        <span class="es">Tres abogados, un solo equipo. Cada caso en Aparisi Law está a cargo de un abogado que comparece cada semana ante la corte de inmigración y USCIS, y que conocerá su expediente por nombre.</span>
       </p>
       <div class="attorneys-grid">
 
@@ -255,10 +258,6 @@
             <span class="en">Attorney</span>
             <span class="es">Abogado</span>
           </div>
-          <p class="attorney-bio">
-            <span class="en">[Bio placeholder]</span>
-            <span class="es">[Bio placeholder]</span>
-          </p>
           <div class="attorney-meta">
             <span class="en">English, Spanish</span>
             <span class="es">Inglés, español</span>
@@ -266,30 +265,13 @@
         </div>
       </article>
 
-      <!-- Josh -->
-      <article class="attorney-card">
-        <div class="attorney-photo attorney-photo-placeholder" aria-label="Joshua Nam">JN</div>
-        <div class="attorney-info">
-          <h2>Joshua Nam</h2>
-          <div class="attorney-title">
-            <span class="en">Attorney</span>
-            <span class="es">Abogado</span>
-          </div>
-          <p class="attorney-bio">
-            <span class="en">[Bio placeholder]</span>
-            <span class="es">[Bio placeholder]</span>
-          </p>
-          <div class="attorney-meta">
-            <span class="en">[Languages]</span>
-            <span class="es">[Idiomas]</span>
-          </div>
-        </div>
-      </article>
+
 
       </div>
     </div>
   </section>
 
+  </main>
   <!-- Footer -->
   <footer>
     <div class="footer-inner">
